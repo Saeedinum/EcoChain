@@ -28,7 +28,7 @@ const Home = () => {
             <span>odio vitae viverra tincidunt.</span>
           </p>
         </div>
-        <div className="relative flex h-[100vh] w-full items-center justify-center bg-transparent lg:my-20 lg:h-[170vh]">
+        <div className="relative flex h-[80vh] w-full items-center justify-center bg-transparent sm:h-[100vh] lg:my-20 lg:h-[170vh]">
           <div className="absolute left-[50%] top-20 z-50 flex size-[70px] translate-x-[-50%] cursor-pointer items-center justify-center rounded-full bg-[#FFFFE4] sm:size-[140px] lg:top-0 lg:size-[244px]">
             <img
               src={delgaciation}
@@ -109,11 +109,11 @@ const Home = () => {
           <img
             src={earthCo2}
             alt="Earth CO2"
-            className="mt-28 w-[114px] sm:mt-52 sm:w-[150px] lg:w-[300px]"
+            className="w-[114px] sm:mt-52 sm:w-[150px] lg:w-[300px]"
           />
         </div>
       </section>
-      <section className="mt-20 flex flex-col items-center gap-10 sm:mt-52 md:mt-60 md:flex-row md:justify-center md:gap-40">
+      <section className="flex flex-col items-center gap-10 sm:mt-52 md:mt-60 md:flex-row md:justify-center md:gap-40">
         <img src={learn} alt="" className="w-[191px] md:w-[250px] lg:w-fit" />
         <div className="flex flex-col items-center gap-8">
           <h2 className="flex flex-col items-center gap-2 text-nowrap text-center text-[24px] font-extrabold text-[#0B539B] lg:text-[45px]">

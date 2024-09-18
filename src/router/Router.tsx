@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "../pages/home/Home";
 import NotFound from "../pages/NotFound";
 import Header from "../components/Header";
+import Footer from "@/components/Footer"
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
             <>
               <Header />
               <Outlet />
+              <Footer/>
             </>
           ),
           children: [{ index: true, element: <Home /> }],
