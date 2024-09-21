@@ -15,7 +15,7 @@ import "./index.css";
 
 const Home = () => {
   return (
-    <main className="select-none">
+    <main className="select-none overflow-hidden">
       <HeroSection />
       <section className="flex flex-col gap-10">
         <div>
@@ -36,7 +36,7 @@ const Home = () => {
               className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit"
             />
             <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">
-              delgaciation
+              Delgaciation
             </span>
           </div>
 
@@ -58,7 +58,7 @@ const Home = () => {
               className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit"
             />
             <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">
-              eruption
+              Eruption
             </span>
           </div>
 
@@ -69,7 +69,7 @@ const Home = () => {
               className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit"
             />
             <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">
-              drought
+              Drought
             </span>
           </div>
 
@@ -80,7 +80,7 @@ const Home = () => {
               className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit"
             />
             <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">
-              wildFires
+              Wild Fires
             </span>
           </div>
 
@@ -91,7 +91,7 @@ const Home = () => {
               className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit"
             />
             <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">
-              landSlide
+              Land slide
             </span>
           </div>
 
@@ -102,10 +102,9 @@ const Home = () => {
               className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit"
             />
             <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">
-              tsunami
+              Tsunami
             </span>
           </div>
-
           <img
             src={earthCo2}
             alt="Earth CO2"
@@ -113,7 +112,10 @@ const Home = () => {
           />
         </div>
       </section>
-      <section className="flex flex-col items-center gap-10 sm:mt-52 md:mt-60 md:flex-row md:justify-center md:gap-40">
+      <section className="relative flex flex-col items-center gap-10 sm:mt-52 md:mt-60 md:flex-row md:justify-center md:gap-40">
+        <p className="absolute -right-1 -top-52 -z-10 h-[269px] w-[32px] rotate-[-27deg] rounded-[333px] bg-[#FFFFE4] lg:-right-32 lg:h-[1313px] lg:w-[89px]"></p>
+        {/* <p className="lg:w-[103px] w-[43px] h-[556px] lg:h-[1313px] rotate-[24deg] -z-10 left-20 sm:left-[11rem] sm:rotate-[40deg] absolute top-[5rem]    bg-[#E4F6FF]  rounded-[333px] "></p> */}
+
         <img src={learn} alt="" className="w-[191px] md:w-[250px] lg:w-fit" />
         <div className="flex flex-col items-center gap-8">
           <h2 className="flex flex-col items-center gap-2 text-nowrap text-center text-[24px] font-extrabold text-[#0B539B] lg:text-[45px]">
