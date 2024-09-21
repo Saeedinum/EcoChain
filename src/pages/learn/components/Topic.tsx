@@ -14,7 +14,7 @@ const Topic = () => {
       <header className="flex items-end justify-between">
         <h2 className="text-3xl font-bold">
           <span className="text-[#0B539B]">Learn about </span>
-          <span className="text-[#86A41E]">{id?.replace("-", " ") || ""}</span>
+          <span className="text-[#86A41E]">{id?.split("-").join(" ") || ""}</span>
         </h2>
         <button className="flex h-[54px] w-[184px] items-center justify-center gap-2 rounded-[20px] bg-[#E4FF87] font-medium text-[#0B539B]">
           <img src={quiezIcon} alt="" className="size-[27px" />

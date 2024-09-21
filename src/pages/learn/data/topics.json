@@ -3,11 +3,11 @@
     {
       "id": 1,
       "title": "greenhouse Gases",
-      "logo": "/src/assets/learn/topics/greengases/logo.png",
+      "logo": "/topics/greengases/logo.png",
       "Definition": [
         {
           "id": 11,
-          "image": "/src/assets/learn/topics/greengases/image1.png",
+          "image": "/topics/greengases/image1.png",
           "title": "What are Greenhouse Gases?",
           "content": "Greenhouse gases (GHGs) are gases in the Earth’s atmosphere that trap heat. They allow sunlight to enter the atmosphere freely, but when the Earth’s surface emits heat, these gases absorb and re-radiate it, warming the planet. This process is known as the greenhouse effect."
         },
@@ -51,7 +51,7 @@
     {
       "id": 2,
       "title": "Renewable Energy",
-      "logo": "/src/assets/learn/topics/renewable/logo.png",
+      "logo": "/topics/renewable/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
@@ -60,7 +60,7 @@
     {
       "id": 3,
       "title": "Wild fires",
-      "logo": "/src/assets/learn/topics/wildfires/logo.png",
+      "logo": "/topics/wildfires/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
@@ -69,7 +69,7 @@
     {
       "id": 4,
       "title": "Air Quality",
-      "logo": "/src/assets/learn/topics/airQuality/logo.png",
+      "logo": "/topics/airQuality/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
@@ -78,7 +78,7 @@
     {
       "id": 5,
       "title": "Soil",
-      "logo": "/src/assets/learn/topics/soil/logo.png",
+      "logo": "/topics/soil/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
@@ -87,7 +87,7 @@
     {
       "id": 6,
       "title": "Water",
-      "logo": "/src/assets/learn/topics/water/logo.png",
+      "logo": "/topics/water/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
@@ -96,7 +96,7 @@
     {
       "id": 7,
       "title": "Biodiversity",
-      "logo": "/src/assets/learn/topics/biodiversity/logo.png",
+      "logo": "/topics/biodiversity/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
@@ -105,7 +105,7 @@
     {
       "id": 8,
       "title": "Social and Economic",
-      "logo": "/src/assets/learn/topics/social/logo.png",
+      "logo": "/topics/social/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
@@ -114,7 +114,7 @@
     {
       "id": 9,
       "title": "Sea levels",
-      "logo": "/src/assets/learn/topics/sea/logo.png",
+      "logo": "/topics/sea/logo.png",
       "Definition": [],
       "Reasons": [],
       "Effects": [],
