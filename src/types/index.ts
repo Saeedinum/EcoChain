@@ -1,5 +1,5 @@
 export interface AuthSlice {
-  fullName: string
+  firstName: string
   token: string
   id: string
 }
