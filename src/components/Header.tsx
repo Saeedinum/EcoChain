@@ -1,26 +1,22 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from "react"
+import { NavLink } from "react-router-dom"
 
-import earthLogo from "/src/assets/global/earth.svg";
-import searchLogo from "/src/assets/global/search.svg";
-import menuLogo from "/src/assets/global/menu.svg";
+import searchLogo from "/src/assets/global/search.svg"
+import menuLogo from "/src/assets/global/menu.svg"
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu"
+
+import Logo from "./Logo"
 
 const Header: React.FC = () => {
   return (
     <header className="m-5 flex h-[75px] items-center justify-between rounded-[50px] p-5 md:mx-20 md:my-10 md:bg-[#FFFFE4] md:drop-shadow-lg">
-      <div className="flex items-center gap-2">
-        <img src={earthLogo} alt="logo " className="" />
-        <h1 className="bg-gradient-to-b from-[#528FCC] to-[#86A41E] bg-clip-text text-2xl font-bold text-transparent">
-          green
-        </h1>
-      </div>
+      <Logo />
       <div className="sm:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger>
@@ -81,7 +77,7 @@ const Header: React.FC = () => {
         />
       </span>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

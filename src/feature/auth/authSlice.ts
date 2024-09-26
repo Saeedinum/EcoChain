@@ -1,11 +1,6 @@
+import { AuthSlice } from "@/types"
 import { createSlice } from "@reduxjs/toolkit"
 import type { PayloadAction } from "@reduxjs/toolkit"
-
-export interface AuthSlice {
-  fullName: string
-  token: string
-  id: string
-}
 
 const initialState: Partial<AuthSlice> = {}
 
@@ -13,9 +8,9 @@ export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    login: (state, action: PayloadAction<AuthSlice>) => {
-      state = action.payload
+    login: (_, action: PayloadAction<AuthSlice>) => {
       localStorage.setItem("token", action.payload.token)
+      return action.payload
     },
     logout: () => {
       localStorage.clear()
