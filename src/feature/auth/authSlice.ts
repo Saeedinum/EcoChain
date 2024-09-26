@@ -2,15 +2,25 @@ import { AuthSlice } from "@/types"
 import { createSlice } from "@reduxjs/toolkit"
 import type { PayloadAction } from "@reduxjs/toolkit"
 
-const initialState: Partial<AuthSlice> = {}
+const initialState: Partial<AuthSlice> = {
+  firstName: localStorage.getItem("name") || "",
+  token: localStorage.getItem("token") || "",
+  id: localStorage.getItem("id") || "",
+}
 
 export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    login: (_, action: PayloadAction<AuthSlice>) => {
+    login: (state, action: PayloadAction<AuthSlice>) => {
       localStorage.setItem("token", action.payload.token)
-      return action.payload
+      localStorage.setItem("name", action.payload.firstName)
+      localStorage.setItem("id", action.payload.id)
+      state = action.payload
+    },
+    setToken: (state, action: PayloadAction<string>) => {
+      state.token = action.payload
+      localStorage.setItem("token", action.payload)
     },
     logout: () => {
       localStorage.clear()
@@ -19,5 +29,5 @@ export const authSlice = createSlice({
   },
 })
 
-export const { login, logout } = authSlice.actions
+export const { login, logout, setToken } = authSlice.actions
 export default authSlice.reducer

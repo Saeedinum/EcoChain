@@ -4,6 +4,7 @@ const nameRegex = /^[a-zA-Z]+(?: [a-zA-Z]+)*$/
 const email = /^[a-zA-Z0-9._%+-]+@(?:gmail\.com)$/i
 const password =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+export const otpRegex = /^\d+$/
 
 export const signupSchema = z
   .object({

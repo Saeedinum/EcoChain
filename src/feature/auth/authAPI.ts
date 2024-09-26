@@ -1,4 +1,5 @@
 import { RootState } from "@/store/store"
+import { SignupForm } from "@/types"
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 
 const baseQuery = fetchBaseQuery({
@@ -16,19 +17,27 @@ export const authAPI = createApi({
   reducerPath: "authAPI",
   baseQuery,
   endpoints: (builder) => ({
-    signup: builder.mutation({
+    signup: builder.mutation<{ token: string }, SignupForm>({
       query: (data) => ({
         url: "signup",
         method: "POST",
-        body: data,
+        body: {
+          firstName: data.firstName,
+          lastName: data.lastName,
+          Email: data.email,
+          password: data.password,
+          passwordConfirm: data.confirmPassword,
+        },
       }),
     }),
 
     verifyEmailUser: builder.mutation({
-      query: (data) => ({
+      query: ({code}) => ({
         url: "verifyEmailUser",
         method: "POST",
-        body: data,
+        body: {
+          code
+        },
       }),
     }),
 
