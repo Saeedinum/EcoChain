@@ -66,7 +66,15 @@
   }
 
   .activeTopic > figure > figcaption {
-    @apply text-[#0B539B] decoration-[#0B539B] underline decoration-2 underline-offset-[10px] font-extrabold
-    }
-
+    @apply font-extrabold text-[#0B539B] underline decoration-[#0B539B] decoration-2 underline-offset-[10px];
+  }
+  .red > div {
+    @apply bg-red-600;
+  }
+  .yellow > div {
+    @apply bg-yellow-500;
+  }
+  .green > div {
+    @apply bg-green-600;
+  }
 }

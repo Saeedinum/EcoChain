@@ -1,17 +1,21 @@
-
 import { useForm, SubmitHandler } from "react-hook-form"
 import Header from "../components/Header"
 import image from "@/assets/auth/singup.png"
 import { SignupForm } from "@/types"
 import InputField from "../components/InputField"
+import useGoodPass from "@/hooks/useGoodPass"
+import { signupSchema } from "@/schema"
+import { zodResolver } from "@hookform/resolvers/zod"
 
 const SignUp = () => {
+  const { ProgressBar, checkPassword } = useGoodPass()
+  
+
   const {
     register,
     handleSubmit,
-    // watch,
-    // formState: { errors },
-  } = useForm<SignupForm>()
+    formState: { errors },
+  } = useForm<SignupForm>({ resolver: zodResolver(signupSchema) })
 
   const onSubmit: SubmitHandler<SignupForm> = (data: SignupForm) =>
     console.log(data)
@@ -38,31 +42,44 @@ const SignUp = () => {
                 label="First Name"
                 id="firstName"
                 placeholder="First name"
+                className={`${errors.firstName ? "border-red-500" : ""}`}
                 register={register("firstName", { required: true })}
               />
               <InputField
                 label="Last name"
                 id="lastName"
                 placeholder="Last name"
+                className={`${errors.lastName ? "border-red-500" : ""}`}
                 register={register("lastName", { required: true })}
               />
             </div>
             <InputField
-              label="  Email"
+              label="Email"
               id="email"
               placeholder="enter your email"
+              className={`${errors.email ? "border-red-500" : ""}`}
               register={register("email", { required: true })}
             />
             <InputField
-              label=" Password"
+              label="Password"
               id="password"
+              type="password"
               placeholder="Enter password"
-              register={register("password", { required: true })}
+              className={`${errors.password ? "border-red-500" : ""}`}
+              register={register("password", {
+                required: "required",
+                onChange(event) {
+                  checkPassword(event.target.value)
+                },
+              })}
+              ProgressBar={ProgressBar}
             />
             <InputField
               label="Confirm password"
               id="confirmPassword"
               placeholder="Confirm password"
+               type="password"
+              className={`${errors.confirmPassword ? "border-red-500" : ""}`}
               register={register("confirmPassword", { required: true })}
             />
 
