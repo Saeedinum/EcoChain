@@ -1,10 +1,10 @@
 import rightBackground from "@/assets/learn/rightBackground.png";
 import leftBackground from "@/assets/learn/leftBackground.png";
 
-import data from "./data/topics.json";
+import data from "../data/topics.json";
 
 import { NavLink, useParams } from "react-router-dom";
-import Topic from "./components/Topic";
+import Topic from "../components/Topic";
 
 const Learn = () => {
   const { id } = useParams();

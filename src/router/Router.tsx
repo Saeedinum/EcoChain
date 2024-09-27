@@ -5,14 +5,14 @@ import {
   RouterProvider,
 } from "react-router-dom"
 
-import Home from "../pages/home/Home"
-import NotFound from "../pages/404/NotFound"
-import Header from "../components/Header"
+import Home from "@/pages/home/Home"
+import NotFound from "@/pages/404/NotFound"
+import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Learn from "@/pages/learn/Learn"
 import Login from "@/feature/auth/pages/Login"
 import SignUp from "@/feature/auth/pages/SignUp"
 import Forget from "@/feature/auth/pages/Forget"
+import Learn from "@/feature/learn/pages/Learn"
 
 import { Toaster } from "@/components/ui/toaster"
 import { useAppSelector } from "@/store/hooks"
