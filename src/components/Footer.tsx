@@ -1,17 +1,12 @@
-import { Link } from "react-router-dom";
-import earthLogo from "/src/assets/global/earth.svg";
-import emailIcon from "@/assets/global/email.svg";
+import { Link } from "react-router-dom"
+import emailIcon from "@/assets/global/email.svg"
+import Logo from "./Logo"
 
 const Footer = () => {
   return (
     <footer className="mb-5 mt-20 flex w-full flex-col items-start gap-[40px] rounded-[197px] bg-[#FFFFE4] px-[120px] py-[30px] sm:pl-52 md:relative md:flex-row md:justify-evenly md:px-10">
       <div className="flex flex-col items-center gap-[10px]">
-        <div className="flex items-center gap-2">
-          <img src={earthLogo} alt="logo " className="" />
-          <h1 className="bg-gradient-to-b from-[#528FCC] to-[#86A41E] bg-clip-text text-2xl font-bold text-transparent">
-            green
-          </h1>
-        </div>
+        <Logo />
         <p className="text-nowrap text-[13px] text-[#0B539B]">
           Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit.
         </p>
@@ -78,7 +73,7 @@ const Footer = () => {
         © 2024, All Rights Reserved
       </p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

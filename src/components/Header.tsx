@@ -1,26 +1,22 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-
-import earthLogo from "/src/assets/global/earth.svg";
-import searchLogo from "/src/assets/global/search.svg";
-import menuLogo from "/src/assets/global/menu.svg";
+import React from "react"
+import { Link, NavLink } from "react-router-dom"
+import menuLogo from "/src/assets/global/menu.svg"
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu"
+
+import Logo from "./Logo"
+import { useAppSelector } from "@/store/hooks"
 
 const Header: React.FC = () => {
+  const auth = useAppSelector((state) => state.auth)
   return (
-    <header className="m-5 flex h-[75px] items-center justify-between rounded-[50px] p-5 md:mx-20 md:my-10 md:bg-[#FFFFE4] md:drop-shadow-lg">
-      <div className="flex items-center gap-2">
-        <img src={earthLogo} alt="logo " className="" />
-        <h1 className="bg-gradient-to-b from-[#528FCC] to-[#86A41E] bg-clip-text text-2xl font-bold text-transparent">
-          green
-        </h1>
-      </div>
+    <header className="m-5 flex h-[75px] items-center justify-between rounded-[50px] py-5 md:mx-10 md:mb-10">
+      <Logo />
       <div className="sm:hidden">
         <DropdownMenu>
           <DropdownMenuTrigger>
@@ -43,10 +39,30 @@ const Header: React.FC = () => {
             <DropdownMenuItem>
               <NavLink to={"/play"}>Play</NavLink>
             </DropdownMenuItem>
+            {auth.token ? (
+              <div className="place-self-center text-[20px] text-[#0B539B]">
+                {auth.firstName}
+              </div>
+            ) : (
+              <div className="itmes-center flex w-full flex-col justify-center">
+                <Link
+                  to={"/login"}
+                  className="text-[20px] font-bold text-[#0B539B]"
+                >
+                  Login
+                </Link>
+                <Link
+                  to={"/signup"}
+                  className="text-[20px] font-bold text-[#0B539B]"
+                >
+                  Sign up
+                </Link>
+              </div>
+            )}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <nav className="hidden gap-10 text-[20px] font-bold text-[#0B539B] sm:flex">
+      <nav className="hidden gap-3 text-[18px] font-bold text-[#0B539B] sm:flex md:gap-4 lg:gap-10 lg:text-[20px]">
         <NavLink
           to={"/"}
           className={({ isActive }) => (isActive ? "text-[#86A41E]" : "")}
@@ -72,16 +88,23 @@ const Header: React.FC = () => {
           Play
         </NavLink>
       </nav>
-      <span className="hidden h-[41px] w-[245px] items-center gap-4 rounded-[30px] border-none bg-[#E4F6FF] p-1 px-5 text-[#0B539B] lg:flex">
-        <img src={searchLogo} alt="" className="size-[18px]" />
-        <input
-          type="text"
-          placeholder="search"
-          className="h-full bg-transparent outline-0 placeholder:text-[#0B539B]"
-        />
-      </span>
+      {auth.token ? (
+        <div className="hidden text-[20px] sm:flex">{auth.firstName}</div>
+      ) : (
+        <div className="hidden items-center sm:flex lg:text-[20px]">
+          <Link to={"/login"} className="font-bold text-[#0B539B]">
+            Login
+          </Link>
+          <Link
+            to={"/signup"}
+            className="ml-3 content-center text-nowrap rounded-[20px] bg-[#528FCC] text-center font-bold text-white max-lg:px-2 max-lg:py-1 lg:h-[48px] lg:w-[132px]"
+          >
+            Sign up
+          </Link>
+        </div>
+      )}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
