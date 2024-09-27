@@ -20,6 +20,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
+import { useToast } from "@/hooks/use-toast"
 
 const Verify = ({
   open,
@@ -34,6 +35,8 @@ const Verify = ({
   const dispatch = useAppDispatch()
   const [verifyEmailUser, { isLoading }] = useVerifyEmailUserMutation()
 
+  const { toast } = useToast()
+
   const [value, setValue] = useState<string>("")
   const [error, setError] = useState<string>("")
 
@@ -43,7 +46,6 @@ const Verify = ({
       .unwrap()
       .then((payload) => {
         sessionStorage.clear()
-        console.log(payload)
         dispatch(
           login({
             token: payload.token,
@@ -52,6 +54,10 @@ const Verify = ({
           }),
         )
         navigate("/")
+        toast({
+          title: "Account verified",
+          description: "You have successfully verified your account",
+        })
       })
       .catch((error) => {
         setError(error.data.message)

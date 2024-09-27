@@ -8,6 +8,8 @@ import Learn from "@/pages/learn/Learn"
 import Login from "@/feature/auth/pages/Login"
 import SignUp from "@/feature/auth/pages/SignUp"
 
+import { Toaster } from "@/components/ui/toaster"
+
 const Router = () => {
   return (
     <RouterProvider
@@ -17,6 +19,7 @@ const Router = () => {
           element: (
             <>
               <Header />
+              <Toaster />
               <Outlet />
             </>
           ),
