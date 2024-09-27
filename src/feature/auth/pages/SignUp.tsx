@@ -35,10 +35,6 @@ const SignUp = () => {
     formState: { errors },
   } = useForm<SignupForm>({
     resolver: zodResolver(signupSchema),
-    defaultValues: {
-      password: "qwe123Q!",
-      confirmPassword: "qwe123Q!",
-    },
   })
 
   const onSubmit: SubmitHandler<SignupForm> = async (data: SignupForm) => {

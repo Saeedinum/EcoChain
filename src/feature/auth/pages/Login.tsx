@@ -3,17 +3,53 @@ import { LoginForm } from "@/types"
 import Header from "../components/Header"
 import image from "@/assets/auth/login.png"
 import InputField from "../components/InputField"
+import { useLoginMutation } from "../authAPI"
+import { useNavigate } from "react-router-dom"
+import { useAppDispatch } from "@/store/hooks"
+import { useToast } from "@/hooks/use-toast"
+import { login } from "../authSlice"
 
 const Login = () => {
+  const navigate = useNavigate()
+  const dispatch = useAppDispatch()
+
+  const [loginMutation, { isLoading }] = useLoginMutation()
+
+  const { toast } = useToast()
+
   const {
     register,
     handleSubmit,
-    // watch,
-    // formState: { errors },
+    setError,
+    formState: { errors },
   } = useForm<LoginForm>()
 
-  const onSubmit: SubmitHandler<LoginForm> = (data: LoginForm) =>
-    console.log(data)
+  const onSubmit: SubmitHandler<LoginForm> = async (data: LoginForm) => {
+    await loginMutation(data)
+      .unwrap()
+      .then((payload) => {
+        console.log(payload)
+        dispatch(
+          login({
+            token: payload.token,
+            firstName: payload.data.firstName,
+            id: payload.data._id,
+          }),
+        )
+        navigate("/")
+        toast({
+          description: "You have successfully logged in",
+        })
+      })
+      .catch((error) => {
+        console.log(error)
+        setError("email", {
+          type: "manual",
+          message: error.data.message,
+        })
+        setError("password", {})
+      })
+  }
 
   return (
     <>
@@ -35,12 +71,15 @@ const Login = () => {
               label="  Email"
               id="email"
               placeholder="enter your email"
+              className={`${errors.email ? "border-red-500" : ""}`}
               register={register("email", { required: true })}
             />
             <InputField
               label=" Password"
               id="password"
+              type="password"
               placeholder="Enter password"
+              className={`${errors.password ? "border-red-500" : ""}`}
               register={register("password", { required: true })}
             />
             <div></div>
@@ -48,9 +87,19 @@ const Login = () => {
               type="submit"
               className="h-[54px] w-full rounded-[20px] bg-[#528FCC] text-[20px] font-bold text-white max-sm:mb-5 sm:w-[418px]"
             >
-              Log in
+              {isLoading ? (
+                <p
+                  className="text-surface ml-auto mr-auto h-7 w-7 animate-spin rounded-full border-4 border-solid border-white border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+                  role="status"
+                ></p>
+              ) : (
+                "Log in"
+              )}
             </button>
           </form>
+          {errors.email && (
+            <p className="text-center text-red-500">{errors.email.message}</p>
+          )}
         </section>
         <img src={image} alt="" className="hidden lg:block" />
       </main>

@@ -13,13 +13,12 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     login: (state, action: PayloadAction<AuthSlice>) => {
-      state = action.payload
+      state.firstName = action.payload.firstName
+      state.id = action.payload.id
+      state.token = action.payload.token
       localStorage.setItem("token", action.payload.token)
       localStorage.setItem("name", action.payload.firstName)
-      if (state.id) {
-        // that is because : src/feature/auth/authSlice.ts:15:13 - error TS6133: 'state' is declared but its value is never read.
-        localStorage.setItem("id", state.id)
-      }
+      localStorage.setItem("id", action.payload.id)
     },
     setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload

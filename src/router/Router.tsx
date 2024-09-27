@@ -19,8 +19,8 @@ const Router = () => {
           element: (
             <>
               <Header />
-              <Toaster />
               <Outlet />
+              <Toaster />
             </>
           ),
           children: [

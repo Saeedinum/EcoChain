@@ -32,11 +32,11 @@ export const authAPI = createApi({
     }),
 
     verifyEmailUser: builder.mutation({
-      query: ({code}) => ({
+      query: ({ code }) => ({
         url: "verifyEmailUser",
         method: "POST",
         body: {
-          code
+          code,
         },
       }),
     }),
