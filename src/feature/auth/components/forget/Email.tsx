@@ -3,6 +3,8 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import { useForgetpassMutation } from "../../authAPI"
 
 import InputField from "../InputField"
+import { useAppDispatch } from "@/store/hooks"
+import { setToken } from "../../authSlice"
 
 type emailField = {
   email: string
@@ -13,6 +15,7 @@ const Email = ({
 }: {
   handleSection: (section: number) => void
 }) => {
+  const dispatch = useAppDispatch()
   const [forgetpass, { isLoading }] = useForgetpassMutation()
 
   const {
@@ -23,15 +26,13 @@ const Email = ({
   } = useForm<emailField>()
 
   const onSubmit: SubmitHandler<emailField> = async (data: emailField) => {
-    console.log(data)
     await forgetpass(data)
       .unwrap()
       .then((payload) => {
-        console.log(payload)
+        dispatch(setToken(payload.token!))
         handleSection(2)
       })
       .catch((error) => {
-        console.log(error)
         setError("email", {
           type: "manual",
           message: error.data.message,

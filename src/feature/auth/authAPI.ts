@@ -66,7 +66,7 @@ export const authAPI = createApi({
       query: ({ resetCode }) => ({
         url: "verifycode",
         method: "POST",
-        body: { resetCode },
+        body: { resetCode: `${resetCode}` },
       }),
     }),
 

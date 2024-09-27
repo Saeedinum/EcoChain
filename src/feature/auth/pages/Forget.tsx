@@ -6,7 +6,7 @@ import OTP from "../components/forget/OTP"
 import Reset from "../components/forget/Reset"
 
 const Forget = () => {
-  const [section, setSection] = useState<number>(3)
+  const [section, setSection] = useState<number>(1)
 
   const handleSection = (section: number) => {
     setSection(section)

@@ -60,7 +60,7 @@ const Router = () => {
         },
         {
           path: "forgetPassword",
-          element: auth.token ? <Navigate to={"/"} /> : <Forget />,
+          element: auth.id ? <Navigate to={"/"} /> : <Forget />,
         },
       ])}
     />

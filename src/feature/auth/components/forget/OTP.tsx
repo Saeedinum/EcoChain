@@ -21,10 +21,9 @@ const OTP = ({
 
   const onSubmit = async (code: string) => {
     setError("")
-    await verifycode({ code })
+    await verifycode({ resetCode: code })
       .unwrap()
-      .then((payload) => {
-        console.log(payload)
+      .then(() => {
         handleSection(3)
       })
       .catch((error) => {
