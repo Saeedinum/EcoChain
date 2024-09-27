@@ -1,4 +1,9 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
+import {
+  createBrowserRouter,
+  Navigate,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom"
 
 import Home from "../pages/home/Home"
 import NotFound from "../pages/404/NotFound"
@@ -7,10 +12,13 @@ import Footer from "@/components/Footer"
 import Learn from "@/pages/learn/Learn"
 import Login from "@/feature/auth/pages/Login"
 import SignUp from "@/feature/auth/pages/SignUp"
+import Forget from "@/feature/auth/pages/Forget"
 
 import { Toaster } from "@/components/ui/toaster"
+import { useAppSelector } from "@/store/hooks"
 
 const Router = () => {
+  const auth = useAppSelector((state) => state.auth)
   return (
     <RouterProvider
       router={createBrowserRouter([
@@ -44,11 +52,15 @@ const Router = () => {
         },
         {
           path: "login",
-          element: <Login />,
+          element: auth.token ? <Navigate to={"/"} /> : <Login />,
         },
         {
           path: "signup",
-          element: <SignUp />,
+          element: auth.id ? <Navigate to={"/"} /> : <SignUp />,
+        },
+        {
+          path: "forgetPassword",
+          element: auth.token ? <Navigate to={"/"} /> : <Forget />,
         },
       ])}
     />

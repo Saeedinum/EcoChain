@@ -1,13 +1,20 @@
 import { useForm, SubmitHandler } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Link, useNavigate } from "react-router-dom"
+
 import { LoginForm } from "@/types"
+import { loginSchema } from "@/schema"
+
 import Header from "../components/Header"
-import image from "@/assets/auth/login.png"
 import InputField from "../components/InputField"
-import { useLoginMutation } from "../authAPI"
-import { useNavigate } from "react-router-dom"
-import { useAppDispatch } from "@/store/hooks"
+
 import { useToast } from "@/hooks/use-toast"
+
+import { useAppDispatch } from "@/store/hooks"
+import { useLoginMutation } from "../authAPI"
 import { login } from "../authSlice"
+
+import image from "@/assets/auth/login.png"
 
 const Login = () => {
   const navigate = useNavigate()
@@ -22,13 +29,16 @@ const Login = () => {
     handleSubmit,
     setError,
     formState: { errors },
-  } = useForm<LoginForm>()
+  } = useForm<LoginForm>(
+    {
+      resolver:zodResolver(loginSchema)
+    }
+  )
 
   const onSubmit: SubmitHandler<LoginForm> = async (data: LoginForm) => {
     await loginMutation(data)
       .unwrap()
       .then((payload) => {
-        console.log(payload)
         dispatch(
           login({
             token: payload.token,
@@ -42,7 +52,6 @@ const Login = () => {
         })
       })
       .catch((error) => {
-        console.log(error)
         setError("email", {
           type: "manual",
           message: error.data.message,
@@ -82,7 +91,12 @@ const Login = () => {
               className={`${errors.password ? "border-red-500" : ""}`}
               register={register("password", { required: true })}
             />
-            <div></div>
+            <Link
+              to={"/forgetPassword"}
+              className="-my-5 place-self-end font-medium text-[#86A41E]"
+            >
+              forget Password ?
+            </Link>
             <button
               type="submit"
               className="h-[54px] w-full rounded-[20px] bg-[#528FCC] text-[20px] font-bold text-white max-sm:mb-5 sm:w-[418px]"

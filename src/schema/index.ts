@@ -36,3 +36,31 @@ export const signupSchema = z
       })
     }
   })
+
+export const loginSchema = z.object({
+  email: z
+    .string()
+    .regex(email, { message: "Please enter a valid Gmail address" }),
+  password: z.string().regex(password, {
+    message:
+      "Password must be at least 8 characters long, with one uppercase, one lowercase, one number, and one special character",
+  }),
+})
+
+export const resetPasswordSchema = z
+  .object({
+    password: z.string().regex(password, {
+      message:
+        "Password must be at least 8 characters long, with one uppercase, one lowercase, one number, and one special character",
+    }),
+    confirm: z.string().min(1, { message: "Confirm Password is required" }),
+  })
+  .superRefine(({ password, confirm }, ctx) => {
+    if (confirm !== password) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["confirm"],
+        message: "Passwords do not match",
+      })
+    }
+  })
