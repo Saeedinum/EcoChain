@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 
 import { useAppDispatch, useAppSelector } from "@/store/hooks"
-import { useGetQuestionsQuery } from "../learnAPI"
+import { useGetQuestionsQuery, useSubmitQuizMutation } from "../learnAPI"
 import { addAnswer } from "../learnSlice"
 
 import QuizHeader from "../components/QuizHeader"
@@ -11,14 +11,13 @@ import topics from "../data/topics.json"
 
 import arrow from "@/assets/global/rightArrow.svg"
 
-import "../index.css"
-
 const Quiz = () => {
   const dispatch = useAppDispatch()
 
   const { id } = useParams()
   const { logo, title } = topics.topics.find(e => e.id === id) || { logo: "", title: "" }
 
+  const [submitQuiz, { isLoading: submitLoading }] = useSubmitQuizMutation()
   const { isLoading, isError } = useGetQuestionsQuery({ topic: id })
   const questions = useAppSelector(state => state.learn.questions)
 
