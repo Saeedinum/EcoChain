@@ -20,50 +20,52 @@ import { useAppSelector } from "@/store/hooks"
 const Router = () => {
   const auth = useAppSelector((state) => state.auth)
   return (
-    <RouterProvider
-      router={createBrowserRouter([
-        {
-          path: "/",
-          element: (
-            <>
-              <Header />
-              <Outlet />
-              <Toaster />
-            </>
-          ),
-          children: [
-            {
-              index: true,
-              element: (
-                <>
-                  <Home /> <Footer />
-                </>
-              ),
-            },
-            {
-              path: "learn/:id?",
-              element: <Learn />,
-            },
-            {
-              path: "*",
-              element: <NotFound />,
-            },
-          ],
-        },
-        {
-          path: "login",
-          element: auth.token ? <Navigate to={"/"} /> : <Login />,
-        },
-        {
-          path: "signup",
-          element: auth.id ? <Navigate to={"/"} /> : <SignUp />,
-        },
-        {
-          path: "forgetPassword",
-          element: auth.id ? <Navigate to={"/"} /> : <Forget />,
-        },
-      ])}
-    />
+    <>
+      <RouterProvider
+        router={createBrowserRouter([
+          {
+            path: "/",
+            element: (
+              <>
+                <Header />
+                <Outlet />
+                <Toaster />
+              </>
+            ),
+            children: [
+              {
+                index: true,
+                element: (
+                  <>
+                    <Home /> <Footer />
+                  </>
+                ),
+              },
+              {
+                path: "learn/:id?",
+                element: <Learn />,
+              },
+              {
+                path: "*",
+                element: <NotFound />,
+              },
+            ],
+          },
+          {
+            path: "login",
+            element: auth.token ? <Navigate to={"/"} /> : <Login />,
+          },
+          {
+            path: "signup",
+            element: auth.id ? <Navigate to={"/"} /> : <SignUp />,
+          },
+          {
+            path: "forgetPassword",
+            element: auth.id ? <Navigate to={"/"} /> : <Forget />,
+          },
+        ])}
+      />
+    </>
   )
 }
 
