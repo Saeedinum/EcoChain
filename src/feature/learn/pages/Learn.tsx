@@ -1,13 +1,13 @@
-import rightBackground from "@/assets/learn/rightBackground.png";
-import leftBackground from "@/assets/learn/leftBackground.png";
+import rightBackground from "@/assets/learn/rightBackground.png"
+import leftBackground from "@/assets/learn/leftBackground.png"
 
-import data from "../data/topics.json";
+import data from "../data/topics.json"
 
-import { NavLink, useParams } from "react-router-dom";
-import Topic from "../components/Topic";
+import { NavLink, useParams } from "react-router-dom"
+import Topic from "../components/Topic"
 
 const Learn = () => {
-  const { id } = useParams();
+  const { id } = useParams()
 
   return (
     <main className="relative h-[100vh] w-full pt-20">
@@ -38,6 +38,7 @@ const Learn = () => {
         <nav className="grid grid-cols-5 flex-wrap items-center gap-[5rem] gap-y-4">
           {data.topics.map((topic) => (
             <NavLink
+              key={topic.id}
               to={`/learn/${topic.title.split(" ").join("-")}`}
               className={({ isActive, isPending }) =>
                 isPending ? "pendingTopic" : isActive ? "activeTopic" : ""
@@ -63,7 +64,7 @@ const Learn = () => {
       </section>
       <section className="mt-20 px-20">{id && <Topic />}</section>
     </main>
-  );
-};
+  )
+}
 
-export default Learn;
+export default Learn

@@ -16,6 +16,7 @@ import Learn from "@/feature/learn/pages/Learn"
 
 import { Toaster } from "@/components/ui/toaster"
 import { useAppSelector } from "@/store/hooks"
+import Quiz from "@/feature/learn/pages/Quiz"
 
 const Router = () => {
   const auth = useAppSelector((state) => state.auth)
@@ -43,6 +44,10 @@ const Router = () => {
             {
               path: "learn/:id?",
               element: <Learn />,
+            },
+            {
+              path: "learn/:id/quiz",
+              element: <Quiz />,
             },
             {
               path: "*",
