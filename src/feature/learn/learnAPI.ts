@@ -1,5 +1,6 @@
 import { RootState } from "@/store/store"
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import { getQuestions } from "./learnSlice"
 
 const baseQuery = fetchBaseQuery({
   baseUrl: import.meta.env.VITE_API + "question/",
@@ -21,6 +22,10 @@ export const learnAPI = createApi({
         url: topic,
         method: "GET",
       }),
+      onQueryStarted: async (_, { dispatch, queryFulfilled }) => {
+        const data = (await queryFulfilled).data
+        dispatch(getQuestions(data))
+      },
     }),
   }),
 })

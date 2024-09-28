@@ -13,10 +13,10 @@ import Login from "@/feature/auth/pages/Login"
 import SignUp from "@/feature/auth/pages/SignUp"
 import Forget from "@/feature/auth/pages/Forget"
 import Learn from "@/feature/learn/pages/Learn"
+import Quiz from "@/feature/learn/pages/Quiz"
 
 import { Toaster } from "@/components/ui/toaster"
 import { useAppSelector } from "@/store/hooks"
-import Quiz from "@/feature/learn/pages/Quiz"
 
 const Router = () => {
   const auth = useAppSelector((state) => state.auth)
@@ -29,7 +29,6 @@ const Router = () => {
             <>
               <Header />
               <Outlet />
-              <Toaster />
             </>
           ),
           children: [
@@ -37,7 +36,9 @@ const Router = () => {
               index: true,
               element: (
                 <>
-                  <Home /> <Footer />
+                  <Home />
+                  <Toaster />
+                  <Footer />
                 </>
               ),
             },
@@ -46,14 +47,14 @@ const Router = () => {
               element: <Learn />,
             },
             {
-              path: "learn/:id/quiz",
-              element: <Quiz />,
-            },
-            {
               path: "*",
               element: <NotFound />,
             },
           ],
+        },
+        {
+          path: "learn/:id/quiz",
+          element: <Quiz />,
         },
         {
           path: "login",

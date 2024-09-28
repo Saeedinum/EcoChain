@@ -39,7 +39,7 @@ const Learn = () => {
           {data.topics.map((topic) => (
             <NavLink
               key={topic.id}
-              to={`/learn/${topic.title.split(" ").join("-")}`}
+              to={`/learn/${topic.id}`}
               className={({ isActive, isPending }) =>
                 isPending ? "pendingTopic" : isActive ? "activeTopic" : ""
               }
