@@ -1,8 +1,8 @@
 {
   "topics": [
     {
-      "id": 1,
-      "title": "greenhouse Gases",
+      "title": "Greenhouse Gases",
+      "id": "greenhouse-gases",
       "logo": "/topics/greengases/logo.png",
       "Definition": [
         {
@@ -49,8 +49,8 @@
       "Solutions": []
     },
     {
-      "id": 2,
       "title": "Renewable Energy",
+      "id": "renewable-energy",
       "logo": "/topics/renewable/logo.png",
       "Definition": [],
       "Reasons": [],
@@ -58,8 +58,8 @@
       "Solutions": []
     },
     {
-      "id": 3,
-      "title": "Wild fires",
+      "title": "Wild Fires",
+      "id": "wild-fires",
       "logo": "/topics/wildfires/logo.png",
       "Definition": [],
       "Reasons": [],
@@ -67,8 +67,8 @@
       "Solutions": []
     },
     {
-      "id": 4,
       "title": "Air Quality",
+      "id": "air-quality",
       "logo": "/topics/airQuality/logo.png",
       "Definition": [],
       "Reasons": [],
@@ -76,8 +76,8 @@
       "Solutions": []
     },
     {
-      "id": 5,
       "title": "Soil",
+      "id": "soil",
       "logo": "/topics/soil/logo.png",
       "Definition": [],
       "Reasons": [],
@@ -85,8 +85,8 @@
       "Solutions": []
     },
     {
-      "id": 6,
       "title": "Water",
+      "id": "water",
       "logo": "/topics/water/logo.png",
       "Definition": [],
       "Reasons": [],
@@ -94,26 +94,8 @@
       "Solutions": []
     },
     {
-      "id": 7,
-      "title": "Biodiversity",
-      "logo": "/topics/biodiversity/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
-    },
-    {
-      "id": 8,
-      "title": "Social and Economic",
-      "logo": "/topics/social/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
-    },
-    {
-      "id": 9,
-      "title": "Sea levels",
+      "title": "Sea Levels",
+      "id": "sea-levels",
       "logo": "/topics/sea/logo.png",
       "Definition": [],
       "Reasons": [],
