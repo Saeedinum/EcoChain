@@ -17,12 +17,21 @@ const Quiz = () => {
   const { id } = useParams()
   const { logo, title } = topics.topics.find(e => e.id === id) || { logo: "", title: "" }
 
-  const [submitQuiz, { isLoading: submitLoading }] = useSubmitQuizMutation()
+  const [submitQuiz] = useSubmitQuizMutation()
   const { isLoading, isError } = useGetQuestionsQuery({ topic: id })
   const questions = useAppSelector(state => state.learn.questions)
 
   const [currentQuestion, setCurrentQuestion] = useState<number>(0)
   const [startQuiz, setStartQuiz] = useState(false)
+
+  const handleSubmit = async (submitData: { topic: string; answers: string[] }) => {
+    await submitQuiz({
+      results: {
+        category: submitData.topic,
+        answer: submitData.answers
+      }
+    })
+  }
 
   if (!startQuiz)
     return (
@@ -78,6 +87,7 @@ const Quiz = () => {
         </button>
 
         <button
+          onClick={() => handleSubmit({ topic: id as string, answers: questions.map(q => q.answer?.name) as string[] })}
           disabled={questions.some(q => !q.answer)}
           className={`group relative rounded-lg bg-[#528FCC] px-2 py-1 font-bold text-white duration-100 hover:bg-[#3673b1] disabled:bg-gray-400 ${currentQuestion !== questions?.length - 1 && "hidden"}`}
         >

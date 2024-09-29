@@ -16,6 +16,8 @@ export type Expected_Question = {
   answers: string[]
   id: string
   answer?: { index: number; name: string }
+  result?: boolean | string
+  explain?: string
 }
 
 // The current type 'BACKEND_Question' represents the structure used by the backend.
