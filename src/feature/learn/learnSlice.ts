@@ -17,7 +17,6 @@ export const learnSlice = createSlice({
           question: q.ques,
           answers: [q.result1, q.result2, q.result3, q.result4],
           id: q._id,
-          answer: { index: 1, name: "saeed" }
         }
       })
     },
