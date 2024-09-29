@@ -16,7 +16,7 @@ const Quiz = () => {
   const dispatch = useAppDispatch()
 
   const { id } = useParams()
-  const { logo, title } = topics.topics.find(e => e.id === id) || { logo: "", title: "" }
+  const { logo, title, id: topicID } = topics.topics.find(e => e.id === id) || { logo: "", title: "", id: "" }
 
   const [submitQuiz] = useSubmitQuizMutation()
   const { isLoading, isError } = useGetQuestionsQuery({ topic: id })
@@ -46,7 +46,7 @@ const Quiz = () => {
   if (quizStatus === "loading")
     return (
       <>
-        <QuizHeader title={title} image={logo} />
+        <QuizHeader title={title} id={topicID} image={logo} />
         <main className="flex w-full flex-col items-center justify-center pt-32">
           <button disabled={isLoading || isError} onClick={() => setQuizStatus("quiz")} className="text-3xl font-bold text-[#3673b1]">
             {isLoading ? "Loading..." : isError ? "Error" : "Start Quiz"}
@@ -58,7 +58,7 @@ const Quiz = () => {
 
   return (
     <>
-      <QuizHeader title={title} image={logo} />
+      <QuizHeader title={title} id={topicID} image={logo} />
       <main className="mt-10 flex w-full items-center justify-center gap-20">
         {windowWidth < 1024 ? (
           <section className="relative flex select-none flex-col gap-10 px-5 pt-5">
