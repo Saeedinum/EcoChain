@@ -68,7 +68,13 @@ const AirQuality = () => {
           </>
         )}
         {section === "Reasons" && (
-          <>
+          <section className="">
+            <h1 className=" text-center font-bold text-3xl">World's Air Polluation : Real-time Air Quality Index</h1>
+            <div className="left-0 top-0 mx-auto my-10 mb-20 h-[500px] w-[800px] rounded-[5rem] border-10 border-sloid border-gray-700">
+              <div className="overflow-hidden"></div>
+              <iframe src="https://waqi.info/#/c/6.627/-2.109/2z" scrolling="no" className="-mt-15 h-full w-full overflow-hidden border-0"></iframe>
+            </div>
+
             <figure className="flex items-center justify-between gap-10 max-lg:flex-col lg:justify-evenly">
               <img src={ReasonImageOne} alt="" className="max-sm:w-[300px]" />
               <figcaption className="order-2 max-w-[488px] text-start md:order-1">
@@ -102,7 +108,7 @@ const AirQuality = () => {
                 </p>
               </figcaption>
             </figure>
-          </>
+          </section>
         )}
         {section === "Effects" && (
           <>
