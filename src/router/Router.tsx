@@ -19,6 +19,7 @@ import SeaLevels from "@/feature/learn/pages/topics/SeaLevels"
 import Soil from "@/feature/learn/pages/topics/Soil"
 import Water from "@/feature/learn/pages/topics/Water"
 import WildFires from "@/feature/learn/pages/topics/WildFires"
+import Senarios from "@/pages/senarios/Senarios"
 
 const Router = () => {
   const auth = useAppSelector(state => state.auth)
@@ -77,6 +78,10 @@ const Router = () => {
                   element: <WildFires />
                 }
               ]
+            },
+            {
+              path: "/senarios",
+              element: <Senarios />
             },
             {
               path: "*",
