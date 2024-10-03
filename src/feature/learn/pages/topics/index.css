@@ -1,0 +1,29 @@
+h3 {
+  color: hsla(0, 0%, 0%, 0.62);
+  margin-top: 10px;
+}
+
+.dots > span {
+  color: hsla(0, 0%, 0%, 0.62);
+  font-weight: 400;
+}
+
+.dots {
+  margin-left: 14px;
+}
+
+.dots > span {
+  position: relative;
+}
+
+.dots > span::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+  border-radius: 50%;
+  top: 12px;
+  left: -10px;
+}

@@ -4,103 +4,50 @@
       "title": "Greenhouse Gases",
       "id": "greenhouse-gases",
       "logo": "/topics/greengases/logo.png",
-      "Definition": [
-        {
-          "id": 11,
-          "image": "/topics/greengases/image1.png",
-          "title": "What are Greenhouse Gases?",
-          "content": "Greenhouse gases (GHGs) are gases in the Earth’s atmosphere that trap heat. They allow sunlight to enter the atmosphere freely, but when the Earth’s surface emits heat, these gases absorb and re-radiate it, warming the planet. This process is known as the greenhouse effect."
-        },
-        {
-          "id": 12,
-          "image1": "/src/assets/learn/topics/greengases/image2.png",
-          "image2": "/src/assets/learn/topics/greengases/image3.png",
-          "title": "Types of Greenhouse Gases",
-          "content": [
-            {
-              "id": 121,
-              "point": "1. Carbon Dioxide (CO2)",
-              "one": "Sources: Burning fossil fuels (coal, oil, natural gas), deforestation, and various industrial processes.",
-              "two": "Impact: CO2 is the primary greenhouse gas emitted through human activities and is responsible for about 76% of global GHG emissions1."
-            },
-            {
-              "id": 122,
-              "point": "2. Methane (CH4)",
-              "one": "Sources: Agriculture (especially livestock), landfills, and natural gas production.",
-              "two": "Impact: Methane is over 25 times more effective than CO2 at trapping heat in the atmosphere over a 100-year period2."
-            },
-            {
-              "id": 123,
-              "point": "3. Nitrous Oxide (N2O)",
-              "one": "Sources: Agricultural activities (fertilizer use), fossil fuel combustion, and industrial processes.",
-              "two": "Impact: Nitrous oxide has a global warming potential 298 times that of CO2 over a 100-year period2."
-            },
-            {
-              "id": 124,
-              "point": "4. Fluorinated Gases",
-              "one": "Sources: Industrial processes, refrigeration, and the use of various consumer products.",
-              "two": "Impact: These gases, including hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), and sulfur hexafluoride (SF6), have a high global warming potential and can remain in the atmosphere for a long time2."
-            }
-          ]
-        }
-      ],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
+      "video": "",
+      "sections": ["Definition", "Reasons", "Effects", "Solutions"]
     },
     {
       "title": "Renewable Energy",
       "id": "renewable-energy",
       "logo": "/topics/renewable/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
+      "video": "1kUE0BZtTRc",
+      "sections": ["Definition", "Effects", "Solutions"]
     },
     {
       "title": "Wild Fires",
       "id": "wild-fires",
       "logo": "/topics/wildfires/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
+      "video": "5hghT1W33cY",
+      "sections": ["Definition", "Reasons", "Effects", "Solutions"]
     },
     {
       "title": "Air Quality",
       "id": "air-quality",
       "logo": "/topics/airQuality/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
+      "video": "e6rglsLy1Ys",
+      "sections": ["Definition", "Reasons", "Effects", "Solutions"]
     },
     {
       "title": "Soil",
       "id": "soil",
       "logo": "/topics/soil/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
+      "video": "BmZg9ybe62g",
+      "sections": ["Definition", "Reasons", "Effects", "Solutions"]
     },
     {
       "title": "Water",
       "id": "water",
       "logo": "/topics/water/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
+      "video": "Fvkzjt3b-dU",
+      "sections": ["Definition", "Reasons", "Effects", "Solutions"]
     },
     {
       "title": "Sea Levels",
       "id": "sea-levels",
       "logo": "/topics/sea/logo.png",
-      "Definition": [],
-      "Reasons": [],
-      "Effects": [],
-      "Solutions": []
+      "video": "q87mUl13s-s",
+      "sections": ["Definition", "Reasons", "Effects", "Solutions"]
     }
   ]
 }
