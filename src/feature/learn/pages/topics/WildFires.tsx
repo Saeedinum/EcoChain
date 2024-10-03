@@ -5,13 +5,13 @@ import data from "../../data/topics.json"
 
 import DifImageOne from "@/assets/topics/wildfires/definition/image1.png"
 
-// import ReasonImageOne from "@/assets/topics/wildfires/effects/image1.png"
-// import ReasonImageTwo from "@/assets/topics/wildfires/effects/image2.png"
-// import ReasonImageThree from "@/assets/topics/wildfires/effects/image3.png"
+import ReasonImageOne from "@/assets/topics/wildfires/reasons/image1.png"
+import ReasonImageTwo from "@/assets/topics/wildfires/reasons/image2.png"
+import ReasonImageThree from "@/assets/topics/wildfires/reasons/image3.png"
 
-import EffectImageOne from "@/assets/topics/wildfires/reasons/image1.png"
-import EffectImageTwo from "@/assets/topics/wildfires/reasons/image2.png"
-import EffectImageThree from "@/assets/topics/wildfires/reasons/image3.png"
+import EffectImageTwo from "@/assets/topics/wildfires/effects/image2.png"
+import EffectImageThree from "@/assets/topics/wildfires/effects/image3.png"
+import EffectImageFour from "@/assets/topics/wildfires/effects/image4.png"
 
 import SolImageOne from "@/assets/topics/wildfires/solution/image1.png"
 import SolImageTwo from "@/assets/topics/wildfires/solution/image2.png"
@@ -74,42 +74,6 @@ const WildFires = () => {
         {section === "Reasons" && (
           <>
             <figure className="flex items-center justify-between gap-10 max-lg:flex-col lg:justify-evenly">
-              <img src={EffectImageOne} alt="" className="max-sm:w-[300px]" />
-              <figcaption className="max-w-[488px] text-center">
-                <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Reasons of Wild Fires ?</h2>
-                <p className="font-bold text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  Wild Fires are caused by two main factors: Natural Causes and Human Activities also Elements Needed for a Fire: Heat , Fuel and Oxygen.
-                </p>
-              </figcaption>
-            </figure>
-            <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
-              <figcaption className="order-2 max-w-[488px] text-start md:order-1">
-                <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Reasons of Wild Fires</h2>
-                <h3 className="text-lg font-bold sm:text-[20px]">1. Natural Causes</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span>Lightning: One of the most common natural causes of wildfires. Lightning strikes can ignite dry vegetation, leading to fires.</span>
-                  <span>Volcanic Eruptions: Lava flows and pyroclastic flows can ignite fires in surrounding vegetation.</span>
-                </p>
-              </figcaption>
-              <img src={EffectImageTwo} alt="" className="max-sm:w-[300px] md:order-1" />
-            </figure>
-            <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
-              <img src={EffectImageThree} alt="" className="max-sm:w-[300px] md:order-1" />
-              <figcaption className="order-2 max-w-[488px] text-start md:order-1">
-                <h3 className="text-lg font-bold sm:text-[20px]">2. Human Activities</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span> Unattended Campfires: Campfires left unattended or not properly extinguished can start wildfires.</span>
-                  <span> Arson: Deliberate setting of fires.</span>
-                  <span> Agricultural Burns: Controlled burns that get out of control.</span>
-                  <span> Discarded Cigarettes: Cigarettes thrown on dry vegetation can ignite fires.</span>
-                </p>
-              </figcaption>
-            </figure>
-          </>
-        )}
-        {/* {section === "Effects" && (
-          <>
-            <figure className="flex items-center justify-between gap-10 max-lg:flex-col lg:justify-evenly">
               <img src={ReasonImageOne} alt="" className="max-sm:w-[300px]" />
               <figcaption className="max-w-[488px] text-center">
                 <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Reasons of Wild Fires ?</h2>
@@ -126,6 +90,12 @@ const WildFires = () => {
                   <span>Lightning: One of the most common natural causes of wildfires. Lightning strikes can ignite dry vegetation, leading to fires.</span>
                   <span>Volcanic Eruptions: Lava flows and pyroclastic flows can ignite fires in surrounding vegetation.</span>
                 </p>
+              </figcaption>
+              <img src={ReasonImageTwo} alt="" className="max-sm:w-[300px] md:order-1" />
+            </figure>
+            <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
+              <img src={ReasonImageThree} alt="" className="max-sm:w-[300px] md:order-1" />
+              <figcaption className="order-2 max-w-[488px] text-start md:order-1">
                 <h3 className="text-lg font-bold sm:text-[20px]">2. Human Activities</h3>
                 <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
                   <span> Unattended Campfires: Campfires left unattended or not properly extinguished can start wildfires.</span>
@@ -134,10 +104,64 @@ const WildFires = () => {
                   <span> Discarded Cigarettes: Cigarettes thrown on dry vegetation can ignite fires.</span>
                 </p>
               </figcaption>
-              <img src={ReasonImageTwo} alt="" className="max-sm:w-[300px] md:order-1" />
             </figure>
           </>
-        )} */}
+        )}
+        {section === "Effects" && (
+          <>
+            <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
+              <figcaption className="order-2 max-w-[488px] text-start md:order-1">
+                <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Impacts of Wild Fires</h2>
+                <h3 className="text-lg font-bold sm:text-[20px]">1. Environmental Impact</h3>
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  <span>Habitat Destruction: Wildfires can destroy habitats, leading to loss of biodiversity.</span>
+                  <span>Air Quality: Smoke from wildfires can reduce air quality and cause respiratory problems.</span>
+                  <span>Soil Erosion: The removal of vegetation can lead to soil erosion and loss of fertile land.</span>
+                </p>
+                <h3 className="text-lg font-bold sm:text-[20px]">2. Economic Impact</h3>
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  <span> Property Damage: Wildfires can destroy homes, businesses, and infrastructure.</span>
+                  <span> Firefighting Costs: Significant resources are spent on firefighting efforts and recovery.</span>
+                </p>
+              </figcaption>
+              <img src={EffectImageTwo} alt="" className="max-sm:w-[300px] md:order-1" />
+            </figure>
+            <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
+              <img src={EffectImageThree} alt="" className="max-sm:w-[300px] md:order-1" />
+              <figcaption className="order-2 max-w-[488px] text-start md:order-1">
+                <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Impacts of Wild Fires</h2>
+                <h3 className="text-lg font-bold sm:text-[20px]">1. Environmental Impact</h3>
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  <span>Habitat Destruction: Wildfires can destroy habitats, leading to loss of biodiversity.</span>
+                  <span>Air Quality: Smoke from wildfires can reduce air quality and cause respiratory problems.</span>
+                  <span>Soil Erosion: The removal of vegetation can lead to soil erosion and loss of fertile land.</span>
+                </p>
+                <h3 className="text-lg font-bold sm:text-[20px]">2. Economic Impact</h3>
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  <span> Property Damage: Wildfires can destroy homes, businesses, and infrastructure.</span>
+                  <span> Firefighting Costs: Significant resources are spent on firefighting efforts and recovery.</span>
+                </p>
+              </figcaption>
+            </figure>
+            <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
+              <figcaption className="order-2 max-w-[488px] text-start md:order-1">
+                <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Impacts of Wild Fires</h2>
+                <h3 className="text-lg font-bold sm:text-[20px]">1. Environmental Impact</h3>
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  <span>Habitat Destruction: Wildfires can destroy habitats, leading to loss of biodiversity.</span>
+                  <span>Air Quality: Smoke from wildfires can reduce air quality and cause respiratory problems.</span>
+                  <span>Soil Erosion: The removal of vegetation can lead to soil erosion and loss of fertile land.</span>
+                </p>
+                <h3 className="text-lg font-bold sm:text-[20px]">2. Economic Impact</h3>
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  <span> Property Damage: Wildfires can destroy homes, businesses, and infrastructure.</span>
+                  <span> Firefighting Costs: Significant resources are spent on firefighting efforts and recovery.</span>
+                </p>
+              </figcaption>
+              <img src={EffectImageFour} alt="" className="max-sm:w-[300px] md:order-1" />
+            </figure>
+          </>
+        )}
         {section === "Solutions" && (
           <>
             <figure className="flex items-center justify-between max-lg:flex-col lg:justify-evenly">
