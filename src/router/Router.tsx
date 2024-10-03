@@ -1,9 +1,4 @@
-import {
-  createBrowserRouter,
-  Navigate,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom"
+import { createBrowserRouter, Navigate, Outlet, RouterProvider } from "react-router-dom"
 
 import Home from "@/pages/home/Home"
 import NotFound from "@/pages/404/NotFound"
@@ -17,9 +12,16 @@ import Quiz from "@/feature/learn/pages/Quiz"
 
 import { Toaster } from "@/components/ui/toaster"
 import { useAppSelector } from "@/store/hooks"
+import AirQuality from "@/feature/learn/pages/topics/AirQuality"
+import GreenhouseGases from "@/feature/learn/pages/topics/GreenhouseGases"
+import RenewableEnergy from "@/feature/learn/pages/topics/RenewableEnergy"
+import SeaLevels from "@/feature/learn/pages/topics/SeaLevels"
+import Soil from "@/feature/learn/pages/topics/Soil"
+import Water from "@/feature/learn/pages/topics/Water"
+import WildFires from "@/feature/learn/pages/topics/WildFires"
 
 const Router = () => {
-  const auth = useAppSelector((state) => state.auth)
+  const auth = useAppSelector(state => state.auth)
   return (
     <RouterProvider
       router={createBrowserRouter([
@@ -40,34 +42,64 @@ const Router = () => {
                   <Toaster />
                   <Footer />
                 </>
-              ),
+              )
             },
             {
-              path: "learn/:id?",
+              path: "learn",
               element: <Learn />,
+              children: [
+                {
+                  path: "air-quality",
+                  element: <AirQuality />
+                },
+                {
+                  path: "greenhouse-gases",
+                  element: <GreenhouseGases />
+                },
+                {
+                  path: "renewable-energy",
+                  element: <RenewableEnergy />
+                },
+                {
+                  path: "sea-levels",
+                  element: <SeaLevels />
+                },
+                {
+                  path: "soil",
+                  element: <Soil />
+                },
+                {
+                  path: "water",
+                  element: <Water />
+                },
+                {
+                  path: "wild-fires",
+                  element: <WildFires />
+                }
+              ]
             },
             {
               path: "*",
-              element: <NotFound />,
-            },
-          ],
+              element: <NotFound />
+            }
+          ]
         },
         {
           path: "learn/:id/quiz",
-          element: <Quiz />,
+          element: <Quiz />
         },
         {
           path: "login",
-          element: auth.token ? <Navigate to={"/"} /> : <Login />,
+          element: auth.token ? <Navigate to={"/"} /> : <Login />
         },
         {
           path: "signup",
-          element: auth.id ? <Navigate to={"/"} /> : <SignUp />,
+          element: auth.id ? <Navigate to={"/"} /> : <SignUp />
         },
         {
           path: "forgetPassword",
-          element: auth.id ? <Navigate to={"/"} /> : <Forget />,
-        },
+          element: auth.id ? <Navigate to={"/"} /> : <Forget />
+        }
       ])}
     />
   )
