@@ -22,7 +22,7 @@ import SolImageTwo from "@/assets/topics/greengases/solution/image2.png"
 import "./index.css"
 
 const GreenhouseGases = () => {
-  const topic = data.topics.find(t => t.id === "renewable-energy")!
+  const topic = data.topics.find(t => t.id === "greenhouse-gases")!
 
   const sections = ["Definition", "Reasons", "Effects", "Solutions"] as const
   const [section, setSection] = useState<"Definition" | "Reasons" | "Effects" | "Solutions">("Definition")

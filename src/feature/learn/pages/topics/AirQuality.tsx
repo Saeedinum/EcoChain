@@ -20,7 +20,7 @@ import SolImageFour from "@/assets/topics/airQuality/solution/image4.png"
 import "./index.css"
 
 const AirQuality = () => {
-  const topic = data.topics.find(t => t.id === "renewable-energy")!
+  const topic = data.topics.find(t => t.id === "air-quality")!
 
   const sections = ["Definition", "Reasons", "Effects", "Solutions"] as const
   const [section, setSection] = useState<"Definition" | "Reasons" | "Effects" | "Solutions">("Definition")

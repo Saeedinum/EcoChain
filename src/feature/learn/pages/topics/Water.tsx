@@ -28,7 +28,7 @@ import SolImageFour from "@/assets/topics/water/solution/image4.png"
 import "./index.css"
 
 const Water = () => {
-  const topic = data.topics.find(t => t.id === "renewable-energy")!
+  const topic = data.topics.find(t => t.id === "water")!
 
   const sections = ["Definition", "Reasons", "Effects", "Solutions"] as const
   const [section, setSection] = useState<"Definition" | "Reasons" | "Effects" | "Solutions">("Definition")
@@ -74,7 +74,7 @@ const Water = () => {
               <figcaption className="max-w-[488px] text-center">
                 <h2 className="text-2xl font-bold text-[#0B539B] sm:text-3xl">What is Water Resources?</h2>
                 <p className="font-bold text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  Water resources are natural resources of water that are potentially useful for humans, for example as a source of drinking water supply or irrigation water
+                  Water resources are natural resources of water that are potentially useful for humans, for example as a source of drinking water supply or irrigation water
                 </p>
               </figcaption>
             </figure>
@@ -84,7 +84,7 @@ const Water = () => {
                 <h2 className="text-2xl font-bold text-[#0B539B] sm:text-3xl">Types of Water Resources</h2>
                 <h3 className="text-lg font-bold sm:text-[20px]">1. Groundwater Resources </h3>
                 <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  Groundwater is the most plentiful of all freshwater natural resources. Some water flows down through the topsoil, clay, and rock sticks on the uppermost levels of the earth,
+                  Groundwater is the most plentiful of all freshwater natural resources. Some water flows down through the topsoil, clay, and rock sticks on the uppermost levels of the earth,
                   supplying water to plants. The water in this container is unsaturated. The majority of the gaps in the unsaturated zone are filled with air rather than water.
                 </p>
               </figcaption>
@@ -103,7 +103,7 @@ const Water = () => {
 
             <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
               <figcaption className="order-2 max-w-[488px] text-start md:order-1">
-                <h3 className="text-lg font-bold sm:text-[20px]">3. Saltwater – 97% </h3>
+                <h3 className="text-lg font-bold sm:text-[20px]">3. Saltwater - 97% </h3>
                 <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
                   Surface water comes from four major sources. Rivers, lakes, ponds,springs and tanks are examples. There are around 10,360 rivers in the country
                 </p>
@@ -139,7 +139,7 @@ const Water = () => {
                 <h2 className="text-2xl font-bold text-[#0B539B] sm:text-3xl">Types of Water scarcity</h2>
                 <h3 className="text-lg font-bold sm:text-[20px]">1. Natural disasters </h3>
                 <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  Whether related to climate change or not, according to one UNICEF report nearly 75% of all natural disasters between 2001 and 2018 were water-related. This includes droughts and
+                  Whether related to climate change or not, according to one UNICEF report nearly 75% of all natural disasters between 2001 and 2018 were water-related. This includes droughts and
                   floods
                 </p>
               </figcaption>
@@ -160,7 +160,7 @@ const Water = () => {
               <figcaption className="order-2 max-w-[488px] text-start md:order-1">
                 <h3 className="text-lg font-bold sm:text-[20px]">3. War and conflict </h3>
                 <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  The ongoing crisis in Syria has led to a well-developed middle-class country lapsing into a water crisis thanks to the destruction of its infrastructure.{" "}
+                  The ongoing crisis in Syria has led to a well-developed middle-class country lapsing into a water crisis thanks to the destruction of its infrastructure.{" "}
                 </p>
               </figcaption>
               <img src={ReasonImageFour} alt="" className="max-sm:w-[300px] md:order-1" />
@@ -184,7 +184,7 @@ const Water = () => {
               <figcaption className="max-w-[488px] text-center">
                 <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Effects of Sea Level Rise</h2>
                 <p className="font-bold text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                   losing that access to drinking water can be detrimental to human health and lives, as we all need water to survive. However, water scarcity and shortage can lead to other serious
+                  losing that access to drinking water can be detrimental to human health and lives, as we all need water to survive. However, water scarcity and shortage can lead to other serious
                   impacts on the environment and threaten global peace and security as well.
                 </p>
               </figcaption>
@@ -194,7 +194,7 @@ const Water = () => {
                 <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Impacts of Water scarcity </h2>
                 <h3 className="text-lg font-bold sm:text-[20px]">1. Food Shortages</h3>
                 <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span>With a global population on pace to reach 9.6 billion by 2050, shrinking water resources will make it difficult for food production to keep up with rising demand.</span>
+                  <span>With a global population on pace to reach 9.6 billion by 2050, shrinking water resources will make it difficult for food production to keep up with rising demand.</span>
                 </p>
               </figcaption>
               <img src={EffImageTwo} alt="" className="max-sm:w-[300px] md:order-1" />
@@ -234,7 +234,7 @@ const Water = () => {
                 <h3 className="text-lg font-bold sm:text-[20px]">1. Recycle wastewater</h3>
                 <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
                   <span>
-                    Some countries, like Singapore, are trying to recycle to cut water imports and become more self-sufficient. The rich East Asian republic is a leader in developing advanced
+                    Some countries, like Singapore, are trying to recycle to cut water imports and become more self-sufficient. The rich East Asian republic is a leader in developing advanced
                     technology that cleanses wastewater for other uses.
                   </span>
                 </p>

@@ -21,7 +21,7 @@ import SolImageThree from "@/assets/topics/sea/solution/image3.png"
 import "./index.css"
 
 const SeaLevels = () => {
-  const topic = data.topics.find(t => t.id === "renewable-energy")!
+  const topic = data.topics.find(t => t.id === "sea-levels")!
 
   const sections = ["Definition", "Reasons", "Effects", "Solutions"] as const
   const [section, setSection] = useState<"Definition" | "Reasons" | "Effects" | "Solutions">("Definition")
