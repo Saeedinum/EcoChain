@@ -14,9 +14,8 @@ const DiscoverHomeSection = () => {
       <div>
         <h2 className="text-nowrap text-center text-[24px] font-extrabold text-[#0B539B] lg:text-[48px]">Discover</h2>
         <p className="flex flex-col items-center text-[13px] font-bold text-[#BABABA] lg:text-[15px]">
-          <span> Lorem ipsum dolor sit amet consectetur. Risus</span>
-          <span> eros tincidunt justo mauris nullam. Arcu ut nulla</span>
-          <span>odio vitae viverra tincidunt.</span>
+          <span> Climate change is causing many changes in the environment,</span>
+          <span> nature, and the natural behavior of our planet.</span>
         </p>
       </div>
       <Link to={"/discover/deglaciation"} className="relative flex h-[80vh] w-full items-center justify-center bg-transparent sm:h-[100vh] lg:my-20 lg:h-[170vh]">

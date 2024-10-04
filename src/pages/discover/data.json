@@ -3,7 +3,7 @@
     {
       "title": "Tornado",
       "id": "tornado",
-      "logo": "/public/discover/Torando.png",
+      "logo": "/discover/Torando.png",
       "event1": {
         "location": "Southern United States",
         "event": "In April 2011, a massive tornado outbreak struck multiple states, including Alabama, Mississippi, and Tennessee. It was one of the largest and deadliest tornado outbreaks in U.S. history, with over 360 confirmed tornadoes during the event.",
@@ -22,7 +22,7 @@
     {
       "title": "Wild Fires",
       "id": "wild-fires",
-      "logo": "/public/discover/Wild Fires.png",
+      "logo": "/discover/Wild Fires.png",
       "event1": {
         "location": "Amazon Rainforest",
         "event": "In 2019, the Amazon experienced the highest number of fires in over a decade. Known as the 'lungs of the Earth,' the Amazon contributes a significant amount of the planet’s oxygen.",
@@ -41,7 +41,7 @@
     {
       "title": "Landslide",
       "id": "landslide",
-      "logo": "/public/discover/Land slide.png",
+      "logo": "/discover/Land slide.png",
       "event1": {
         "location": "Sindhupalchok, Nepal",
         "event": "During the monsoon season in 2020, heavy rains caused multiple landslides in the Sindhupalchok district of Nepal, destroying homes and killing dozens of people.",
@@ -60,7 +60,7 @@
     {
       "title": "Drought",
       "id": "drought",
-      "logo": "/public/discover/Drought.png",
+      "logo": "/discover/Drought.png",
       "event1": {
         "location": "California, United States",
         "event": "Between 2011 and 2017, California experienced one of the most severe droughts in its history. Low rainfall and snowpack levels caused water shortages throughout the state, severely impacting agriculture and wildlife.",
@@ -79,7 +79,7 @@
     {
       "title": "Tsunami",
       "id": "tsunami",
-      "logo": "/public/discover/Tsunami.png",
+      "logo": "/discover/Tsunami.png",
       "event1": {
         "location": "Japan",
         "event": "On March 11, 2011, a 9.0 magnitude earthquake struck off the coast of northeastern Japan, triggering a devastating tsunami. The waves reached heights of up to 40 meters, particularly along Japan’s Tohoku coastline.",
@@ -98,7 +98,7 @@
     {
       "title": "Eruption",
       "id": "eruption",
-      "logo": "/public/discover/Eruption.png",
+      "logo": "/discover/Eruption.png",
       "event1": {
         "location": "Iceland",
         "event": "In April 2010, the Eyjafjallajökull volcano erupted, spewing a massive ash cloud that disrupted air travel across Europe for several weeks. Thousands of flights were canceled, affecting millions of travelers worldwide.",
@@ -117,7 +117,7 @@
     {
       "title": "Deglaciation",
       "id": "deglaciation",
-      "logo": "/public/discover/Delgaciation.png",
+      "logo": "/discover/Delgaciation.png",
       "event1": {
         "location": "Greenland",
         "event": "Greenland’s ice sheet is melting at an accelerating rate, contributing significantly to global sea level rise. Scientists attribute this to a combination of global warming and natural variability.",

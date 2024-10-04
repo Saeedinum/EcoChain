@@ -16,9 +16,6 @@ const Learn = () => {
             Learn about <br />
             climate change{" "}
           </h1>
-          <p className="hidden w-[30%] text-[15px] font-bold text-[#BABABA] lg:block">
-            Lorem ipsum dolor sit amet consectetur. Risus eros tincidunt justo mauris nullam. Arcu ut nulla odio vitae viverra tincidunt.
-          </p>
         </section>
         <section className="mt-20 px-10 lg:px-20">
           <h2 className="text-xl font-semibold text-[#212121] sm:text-2xl md:text-3xl">Choose your topic</h2>

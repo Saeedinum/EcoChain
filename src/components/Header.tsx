@@ -59,7 +59,7 @@ const Header: React.FC = () => {
           Play
         </NavLink>
         <NavLink to={"/senarios"} className={({ isActive }) => (isActive ? "text-[#86A41E]" : "")}>
-          Senarios
+          Scenarios
         </NavLink>
       </nav>
       {auth.token ? (

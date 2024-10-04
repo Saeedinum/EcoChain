@@ -16,14 +16,12 @@ const Discover = () => {
             <figcaption className="flex max-w-[500px] flex-col items-center gap-5">
               <h1 className="text-center text-2xl font-extrabold text-[#0B539B] sm:text-3xl md:text-4xl">Discover</h1>
               <p className="hidden text-center text-[15px] font-bold text-[#BABABA] lg:block">
-                Throughout history, humanity has witnessed numerous natural and man-made disasters that caused widespread destruction and loss of life. From earthquakes to tsunamis and etc., each
-                disaster left a significant impact and taught valuable lessons about resilience and preparedness. In this section, we highlight some of the most notable disasters and how they were
-                faced.
+                Climate change is causing many changes in the environment,nature, and the natural behavior of our planet.
               </p>
             </figcaption>
           </figure>
         </header>
-        <p className="mx-10 my-10 h-[1px] bg-blue-300 "></p>
+        <p className="mx-10 my-10 h-[1px] bg-blue-300"></p>
         {data.topics.map(topic => (
           <EventDetials id={topic.id} />
         ))}
