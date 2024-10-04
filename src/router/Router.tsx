@@ -92,7 +92,7 @@ const Router = () => {
               element: <Play />
             },
             {
-              path: "/discover",
+              path: "/discover/:id?",
               element: <Discover />
             },
             {

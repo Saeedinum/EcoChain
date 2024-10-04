@@ -1,0 +1,137 @@
+{
+  "topics": [
+    {
+      "title": "Tornado",
+      "id": "tornado",
+      "logo": "/public/discover/Torando.png",
+      "event1": {
+        "location": "Southern United States",
+        "event": "In April 2011, a massive tornado outbreak struck multiple states, including Alabama, Mississippi, and Tennessee. It was one of the largest and deadliest tornado outbreaks in U.S. history, with over 360 confirmed tornadoes during the event.",
+        "impact": "The outbreak caused widespread destruction, leading to the deaths of over 300 people and damaging thousands of homes. Cities like Tuscaloosa, Alabama, were severely hit.",
+        "effect": "The disaster led to increased awareness of the importance of early warning systems, prompting the National Weather Service to enhance their tornado tracking and alert systems.",
+        "video": "Oh9FyPJ0yus"
+      },
+      "event2": {
+        "location": "Greensburg, Kansas, United States",
+        "event": "On May 4, 2007, an EF5 tornado completely destroyed the small town of Greensburg, Kansas.",
+        "impact": "The tornado obliterated 95% of the town, killing 11 people and causing millions in damages.",
+        "effect": "After the disaster, Greensburg was rebuilt as one of the most sustainable, eco-friendly towns in the United States, focusing on renewable energy and green construction methods.",
+        "video": "TnVaYvpEaag"
+      }
+    },
+    {
+      "title": "Wild Fires",
+      "id": "wild-fires",
+      "logo": "/public/discover/Wild Fires.png",
+      "event1": {
+        "location": "Amazon Rainforest",
+        "event": "In 2019, the Amazon experienced the highest number of fires in over a decade. Known as the 'lungs of the Earth,' the Amazon contributes a significant amount of the planet’s oxygen.",
+        "impact": "The fires destroyed millions of hectares of forest, leading to severe biodiversity loss and increased carbon emissions.",
+        "effect": "The smoke from the fires impacted the health of local populations, with respiratory issues becoming more common. The global climate was also affected due to this environmental degradation.",
+        "video": "bkaV2jJMqe4"
+      },
+      "event2": {
+        "location": "California, United States",
+        "event": "During the summer of 2024, a series of massive wildfires broke out due to a heatwave and prolonged drought.",
+        "impact": "The fires destroyed thousands of homes and structures, forcing tens of thousands of people to evacuate. Thick smoke covered vast areas, severely degrading air quality.",
+        "effect": "Respiratory illnesses surged, especially among children and the elderly. The wildfires intensified discussions on climate change and its role in increasing the frequency and intensity of such disasters.",
+        "video": "ey2UeVVe6lo"
+      }
+    },
+    {
+      "title": "Landslide",
+      "id": "landslide",
+      "logo": "/public/discover/Land slide.png",
+      "event1": {
+        "location": "Sindhupalchok, Nepal",
+        "event": "During the monsoon season in 2020, heavy rains caused multiple landslides in the Sindhupalchok district of Nepal, destroying homes and killing dozens of people.",
+        "impact": "The landslides left at least 39 people dead and many others missing. Entire villages were engulfed in mud, and roads were destroyed, hindering rescue efforts.",
+        "effect": "The event underscored the challenges faced by rural communities in mountainous regions prone to landslides. It led to discussions on improving disaster preparedness and early warning systems in these vulnerable areas.",
+        "video": "eDKl-nxtu6g"
+      },
+      "event2": {
+        "location": "Shenzhen, China",
+        "event": "In December 2015, a man-made landslide occurred at an industrial park in Shenzhen, caused by the improper dumping of construction waste. The landslide buried 33 buildings and resulted in 73 confirmed deaths.",
+        "impact": "The landslide triggered a major rescue operation as authorities scrambled to find survivors trapped under the debris. It also sparked an investigation into industrial waste disposal practices in China.",
+        "effect": "The disaster prompted the Chinese government to impose stricter regulations on waste management and industrial safety. It also highlighted the dangers of neglecting environmental concerns in rapidly growing urban areas.",
+        "video": "tMekkl0EXmc"
+      }
+    },
+    {
+      "title": "Drought",
+      "id": "drought",
+      "logo": "/public/discover/Drought.png",
+      "event1": {
+        "location": "California, United States",
+        "event": "Between 2011 and 2017, California experienced one of the most severe droughts in its history. Low rainfall and snowpack levels caused water shortages throughout the state, severely impacting agriculture and wildlife.",
+        "impact": "The drought caused a major agricultural crisis, leading to $3.8 billion in losses for the farming sector and the depletion of groundwater supplies. The state imposed water-use restrictions on residents and businesses.",
+        "effect": "The drought led to significant water rationing, with millions of people having to limit their water usage. It also accelerated efforts toward sustainable water management, including recycling wastewater and investing in desalination plants.",
+        "video": "UR5JB5bxsik"
+      },
+      "event2": {
+        "location": "Horn of Africa",
+        "event": "In 2011, a severe drought struck the Horn of Africa, particularly affecting Somalia, Ethiopia, and Kenya. The drought, worsened by climate change, resulted in widespread famine across the region.",
+        "impact": "The drought led to the deaths of an estimated 260,000 people, most of them children. It displaced hundreds of thousands of people, as entire communities lost their livestock and crops, and were forced to migrate in search of food and water.",
+        "effect": "The drought led to an international humanitarian crisis, with millions of people requiring emergency food aid. It also spurred global discussions on climate adaptation and sustainable agricultural practices in drought-prone regions.",
+        "video": "i1aPEZeFTeI"
+      }
+    },
+    {
+      "title": "Tsunami",
+      "id": "tsunami",
+      "logo": "/public/discover/Tsunami.png",
+      "event1": {
+        "location": "Japan",
+        "event": "On March 11, 2011, a 9.0 magnitude earthquake struck off the coast of northeastern Japan, triggering a devastating tsunami. The waves reached heights of up to 40 meters, particularly along Japan’s Tohoku coastline.",
+        "impact": "The tsunami caused the deaths of over 15,000 people, displaced hundreds of thousands, and led to the Fukushima Daiichi nuclear disaster. Coastal towns were completely destroyed, and infrastructure was severely damaged.",
+        "effect": "The disaster resulted in long-term displacement and health effects due to radiation exposure. It also prompted Japan to enhance its disaster preparedness, including improved tsunami defenses, evacuation plans, and stricter nuclear safety regulations.",
+        "video": "3618dZoiaPE"
+      },
+      "event2": {
+        "location": "Indian Ocean",
+        "event": "On December 26, 2004, a massive 9.1-9.3 magnitude earthquake struck off the coast of Sumatra, Indonesia, triggering a powerful tsunami that spread across the Indian Ocean.",
+        "impact": "The tsunami caused widespread destruction, with waves up to 30 meters high in some areas. It killed approximately 230,000 to 280,000 people in 14 countries, making it one of the deadliest natural disasters in recorded history.",
+        "effect": "Entire communities were wiped out, and millions were displaced. The disaster led to a massive global humanitarian response and highlighted the need for improved early warning systems and disaster preparedness in tsunami-prone regions.",
+        "video": "cysl0rucrI0"
+      }
+    },
+    {
+      "title": "Eruption",
+      "id": "eruption",
+      "logo": "/public/discover/Eruption.png",
+      "event1": {
+        "location": "Iceland",
+        "event": "In April 2010, the Eyjafjallajökull volcano erupted, spewing a massive ash cloud that disrupted air travel across Europe for several weeks. Thousands of flights were canceled, affecting millions of travelers worldwide.",
+        "impact": "Although no lives were lost directly from the eruption, the ash cloud grounded more than 100,000 flights, costing airlines over $1.7 billion. The eruption also caused localized flooding in Iceland due to melting glaciers.",
+        "effect": "The event demonstrated the global interconnectedness of air travel and the vulnerability of modern economies to natural disasters. It also spurred research into how volcanic ash clouds affect aviation safety.",
+        "video": "5xYSMGjQ2e49fxh8"
+      },
+      "event2": {
+        "location": "Mount Vesuvius, Italy",
+        "event": "In 79 AD, Mount Vesuvius erupted violently, burying the Roman cities of Pompeii and Herculaneum under ash and pumice. The eruption lasted two days, releasing a deadly pyroclastic flow that killed thousands.",
+        "impact": "The cities were preserved in volcanic ash, providing archaeologists with a snapshot of Roman life. Thousands of people were killed, and the cities remained buried for centuries.",
+        "effect": "The event remains one of the most famous volcanic disasters in history. Today, it serves as a stark reminder of the destructive power of volcanoes and the risks faced by populations living near active volcanoes.",
+        "video": "FL6-dAVmNF7FZuq5"
+      }
+    },
+    {
+      "title": "Deglaciation",
+      "id": "deglaciation",
+      "logo": "/public/discover/Delgaciation.png",
+      "event1": {
+        "location": "Greenland",
+        "event": "Greenland’s ice sheet is melting at an accelerating rate, contributing significantly to global sea level rise. Scientists attribute this to a combination of global warming and natural variability.",
+        "impact": "The melting ice is contributing to rising sea levels, which threatens coastal communities around the world. It is also disrupting marine ecosystems and indigenous ways of life that depend on the ice for hunting and travel.",
+        "effect": "The event has drawn attention to the broader impacts of climate change, particularly the long-term consequences for low-lying regions. It has led to calls for increased action to mitigate climate change and reduce carbon emissions.",
+        "video": "G13tpsHtF5j4SYqa"
+      },
+      "event2": {
+        "location": "Southern Chile and Argentina",
+        "event": "The Patagonia Ice Fields, the largest ice mass in the Southern Hemisphere outside Antarctica, have been shrinking rapidly over the past century due to global warming. Studies show that the Northern and Southern Patagonian Ice Fields have lost significant ice mass, particularly since the 1970s, with glaciers retreating at an accelerated rate.",
+        "impact": "The loss of glaciers in Patagonia contributes to global sea-level rise and has profound effects on local water resources, biodiversity, and ecosystems. Glacial meltwater is crucial for agriculture and freshwater supplies in the region.",
+        "effect": "The deglaciation in Patagonia poses a threat to local communities dependent on glacial meltwater for agriculture and drinking water. It also affects tourism, as glaciers are a major attraction in the region. The shrinking ice fields are part of a global trend that raises concerns about the long-term effects of climate change.",
+        "video": "RYIGhgsMEnofQZ9a"
+      }
+    }
+  ]
+}
