@@ -18,6 +18,7 @@ import SeaLevels from "@/feature/learn/pages/topics/SeaLevels"
 import WildFires from "@/feature/learn/pages/topics/WildFires"
 import Water from "@/feature/learn/pages/topics/Water"
 import Soil from "@/feature/learn/pages/topics/Soil"
+import Discover from "@/pages/discover/Discover"
 import SignUp from "@/feature/auth/pages/SignUp"
 import Forget from "@/feature/auth/pages/Forget"
 import Learn from "@/feature/learn/pages/Learn"
@@ -89,6 +90,10 @@ const Router = () => {
             {
               path: "/play",
               element: <Play />
+            },
+            {
+              path: "/discover",
+              element: <Discover />
             },
             {
               path: "*",

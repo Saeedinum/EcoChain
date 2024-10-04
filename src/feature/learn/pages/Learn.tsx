@@ -6,8 +6,6 @@ import rightBackground from "@/assets/learn/rightBackground.png"
 import leftBackground from "@/assets/learn/leftBackground.png"
 
 const Learn = () => {
-  // const { id } = useParams()
-  // const topic = data.topics.find(x => x.id === id)
   return (
     <>
       <main className="relative h-[100vh] w-full pt-20">
@@ -36,8 +34,7 @@ const Learn = () => {
           </nav>
           <hr className="my-3 mt-10 h-[2px] w-full bg-[#B7B7B7]" />
         </section>
-        {/* {id && data.topics.find(e => e.id === id) && topic && <Outlet />} */}
-        <Outlet/>
+        <Outlet />
       </main>
     </>
   )
