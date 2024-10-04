@@ -113,15 +113,10 @@ const WildFires = () => {
               <figcaption className="order-2 max-w-[488px] text-start md:order-1">
                 <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Impacts of Wild Fires</h2>
                 <h3 className="text-lg font-bold sm:text-[20px]">1. Environmental Impact</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                <p className="dots text-[hsla(0,0%,0%,0.62)] *:block sm:text-[20px]">
                   <span>Habitat Destruction: Wildfires can destroy habitats, leading to loss of biodiversity.</span>
                   <span>Air Quality: Smoke from wildfires can reduce air quality and cause respiratory problems.</span>
                   <span>Soil Erosion: The removal of vegetation can lead to soil erosion and loss of fertile land.</span>
-                </p>
-                <h3 className="text-lg font-bold sm:text-[20px]">2. Economic Impact</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span> Property Damage: Wildfires can destroy homes, businesses, and infrastructure.</span>
-                  <span> Firefighting Costs: Significant resources are spent on firefighting efforts and recovery.</span>
                 </p>
               </figcaption>
               <img src={EffectImageTwo} alt="" className="max-sm:w-[300px] md:order-1" />
@@ -129,33 +124,19 @@ const WildFires = () => {
             <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
               <img src={EffectImageThree} alt="" className="max-sm:w-[300px] md:order-1" />
               <figcaption className="order-2 max-w-[488px] text-start md:order-1">
-                <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Impacts of Wild Fires</h2>
-                <h3 className="text-lg font-bold sm:text-[20px]">1. Environmental Impact</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span>Habitat Destruction: Wildfires can destroy habitats, leading to loss of biodiversity.</span>
-                  <span>Air Quality: Smoke from wildfires can reduce air quality and cause respiratory problems.</span>
-                  <span>Soil Erosion: The removal of vegetation can lead to soil erosion and loss of fertile land.</span>
-                </p>
                 <h3 className="text-lg font-bold sm:text-[20px]">2. Economic Impact</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span> Property Damage: Wildfires can destroy homes, businesses, and infrastructure.</span>
-                  <span> Firefighting Costs: Significant resources are spent on firefighting efforts and recovery.</span>
+                <p className="dots text-[hsla(0,0%,0%,0.62)] *:block sm:text-[20px]">
+                  <span>Property Damage: Wildfires can destroy homes, businesses, and infrastructure.</span>
+                  <span>Firefighting Costs: Significant resources are spent on firefighting efforts and recovery.</span>
                 </p>
               </figcaption>
             </figure>
             <figure className="my-20 flex items-center justify-between gap-10 max-lg:flex-col lg:my-32 lg:justify-evenly">
               <figcaption className="order-2 max-w-[488px] text-start md:order-1">
-                <h2 className="mb-5 text-2xl font-bold text-[#0B539B] sm:text-3xl">Impacts of Wild Fires</h2>
-                <h3 className="text-lg font-bold sm:text-[20px]">1. Environmental Impact</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span>Habitat Destruction: Wildfires can destroy habitats, leading to loss of biodiversity.</span>
-                  <span>Air Quality: Smoke from wildfires can reduce air quality and cause respiratory problems.</span>
-                  <span>Soil Erosion: The removal of vegetation can lead to soil erosion and loss of fertile land.</span>
-                </p>
-                <h3 className="text-lg font-bold sm:text-[20px]">2. Economic Impact</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
-                  <span> Property Damage: Wildfires can destroy homes, businesses, and infrastructure.</span>
-                  <span> Firefighting Costs: Significant resources are spent on firefighting efforts and recovery.</span>
+                <h3 className="text-lg font-bold sm:text-[20px]">3. Health Impact</h3>
+                <p className="dots text-[hsla(0,0%,0%,0.62)] *:block sm:text-[20px]">
+                  <span>Respiratory Issues: Smoke and particulate matter can cause respiratory problems and exacerbate conditions like asthma.</span>
+                  <span>Mental Health: The stress and trauma of experiencing a wildfire can have long-term mental health effects.</span>
                 </p>
               </figcaption>
               <img src={EffectImageFour} alt="" className="max-sm:w-[300px] md:order-1" />
