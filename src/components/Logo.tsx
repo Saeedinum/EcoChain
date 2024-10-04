@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <Link to={"/"} className="flex items-center gap-2">
       <img src={earthLogo} alt="logo " className="" />
       <h1 className="bg-gradient-to-b from-[#528FCC] to-[#86A41E] bg-clip-text text-2xl font-bold text-transparent">
-        green
+       EcoChain
       </h1>
     </Link>
   )
