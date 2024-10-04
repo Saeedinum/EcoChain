@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import quiezIcon from "@/assets/global/quiz.svg"
 import data from "../../data/topics.json"
@@ -6,14 +6,14 @@ import data from "../../data/topics.json"
 import DifImageOne from "@/assets/topics/renewable/definition/image1.png"
 import DifImageTwo from "@/assets/topics/renewable/definition/image2.png"
 import DifImageThree from "@/assets/topics/renewable/definition/image3.png"
-
 import EffImageOne from "@/assets/topics/renewable/effects/image1.png"
 import EffImageTwo from "@/assets/topics/renewable/effects/image2.png"
 import EffImageThree from "@/assets/topics/renewable/effects/image3.png"
-
 import SolImageOne from "@/assets/topics/renewable/solution/image1.png"
 import SolImageTwo from "@/assets/topics/renewable/solution/image2.png"
 import SolImageThree from "@/assets/topics/renewable/solution/image3.png"
+
+import useSmoothScroll from "@/hooks/useSmoothScroll"
 
 import "./index.css"
 
@@ -22,6 +22,10 @@ const RenewableEnergy = () => {
 
   const sections = ["Definition", "Effects", "Solutions"] as const
   const [section, setSection] = useState<"Definition" | "Effects" | "Solutions">("Definition")
+
+  const targetRef = useRef<HTMLElement>(null)
+  useSmoothScroll(400, targetRef)
+
   return (
     <section className="px-10 lg:px-20">
       <header className="flex flex-wrap items-end justify-between">
@@ -37,7 +41,7 @@ const RenewableEnergy = () => {
           Go to Quiz
         </Link>
       </header>
-      <nav className="ml-auto mr-auto mt-10 flex w-full max-lg:justify-between lg:mt-5 lg:justify-center lg:gap-[60px]">
+      <nav ref={targetRef} className="ml-auto mr-auto mt-10 flex w-full max-lg:justify-between lg:mt-5 lg:justify-center lg:gap-[60px]">
         {sections.map(item => (
           <button
             key={item}
@@ -157,12 +161,12 @@ const RenewableEnergy = () => {
               <figcaption className="order-2 max-w-[488px] text-start md:order-1">
                 {/* <h2 className="text-2xl font-bold text-[#0B539B] sm:text-3xl">Types of Renewable Energy</h2> */}
                 <h3 className="text-lg font-bold sm:text-[20px]">1. Intermittency</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)]  sm:text-[20px]">
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
                   Renewable energy sources like solar and wind are intermittent. Solutions include energy storage systems (e.g., batteries) and grid integration.
                 </p>
                 <h3 className="text-lg font-bold sm:text-[20px]">2. Initial Costs</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)]  sm:text-[20px]">
-                High initial costs for renewable energy installations. Solutions include government incentives, subsidies, and technological advancements that reduce costs over time.
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  High initial costs for renewable energy installations. Solutions include government incentives, subsidies, and technological advancements that reduce costs over time.
                 </p>
               </figcaption>
               <img src={SolImageTwo} alt="" className="max-sm:w-[300px] md:order-1" />
@@ -170,11 +174,11 @@ const RenewableEnergy = () => {
             <figure className="flex items-center justify-between max-lg:flex-col lg:justify-evenly">
               <img src={SolImageThree} alt="" className="max-sm:w-[300px]" />
               <figcaption className="max-w-[488px] text-start">
-                <h3 className="text-lg font-bold mt-5  sm:text-[20px]">3.Infrastructure</h3>
-                <p className="text-[hsla(0,0%,0%,0.62)]  sm:text-[20px]">
-                Need for infrastructure development to support renewable energy. Solutions include smart grids and decentralized energy systems.
+                <h3 className="mt-5 text-lg font-bold sm:text-[20px]">3.Infrastructure</h3>
+                <p className="text-[hsla(0,0%,0%,0.62)] sm:text-[20px]">
+                  Need for infrastructure development to support renewable energy. Solutions include smart grids and decentralized energy systems.
                 </p>
-                <h3 className="text-lg font-bold  sm:text-[20px]">4. Biomass Energy</h3>
+                <h3 className="text-lg font-bold sm:text-[20px]">4. Biomass Energy</h3>
                 <p className="dots *:block sm:text-[20px]">
                   <span>Description: Biomass energy is produced from organic materials such as plant and animal waste.</span>
                   <span>Applications: Biofuels, biogas, biomass power plants.</span>

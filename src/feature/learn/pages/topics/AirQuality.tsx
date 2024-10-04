@@ -1,21 +1,19 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import data from "../../data/topics.json"
 
 import quiezIcon from "@/assets/global/quiz.svg"
-
 import DifImageOne from "@/assets/topics/airQuality/definition/image1.png"
-
 import ReasonImageOne from "@/assets/topics/airQuality/reasons/image1.png"
 import ReasonImageTwo from "@/assets/topics/airQuality/reasons/image2.png"
 import ReasonImageThree from "@/assets/topics/airQuality/reasons/image3.png"
-
 import EffImageOne from "@/assets/topics/airQuality/effects/image1.png"
-
 import SolImageOne from "@/assets/topics/airQuality/solution/image1.png"
 import SolImageTwo from "@/assets/topics/airQuality/solution/image2.png"
 import SolImageThree from "@/assets/topics/airQuality/solution/image3.png"
 import SolImageFour from "@/assets/topics/airQuality/solution/image4.png"
+
+import useSmoothScroll from "@/hooks/useSmoothScroll"
 
 import "./index.css"
 
@@ -24,6 +22,10 @@ const AirQuality = () => {
 
   const sections = ["Definition", "Reasons", "Effects", "Solutions"] as const
   const [section, setSection] = useState<"Definition" | "Reasons" | "Effects" | "Solutions">("Definition")
+
+  const targetRef = useRef<HTMLElement>(null)
+  useSmoothScroll(400, targetRef)
+
   return (
     <section className="px-10 lg:px-20">
       <header className="flex flex-wrap items-end justify-between">
@@ -39,7 +41,7 @@ const AirQuality = () => {
           Go to Quiz
         </Link>
       </header>
-      <nav className="ml-auto mr-auto mt-10 flex w-full max-lg:justify-between lg:mt-5 lg:justify-center lg:gap-[60px]">
+      <nav ref={targetRef} className="ml-auto mr-auto mt-10 flex w-full max-lg:justify-between lg:mt-5 lg:justify-center lg:gap-[60px]">
         {sections.map(item => (
           <button
             key={item}
@@ -50,7 +52,6 @@ const AirQuality = () => {
           </button>
         ))}
       </nav>
-
       <section className="mt-20 pb-20">
         {section === "Definition" && (
           <>
@@ -69,8 +70,8 @@ const AirQuality = () => {
         )}
         {section === "Reasons" && (
           <section className="">
-            <h1 className=" text-center font-bold text-3xl">World's Air Polluation : Real-time Air Quality Index</h1>
-            <div className="left-0 top-0 mx-auto my-10 mb-20 h-[500px] w-[800px] rounded-[5rem] border-10 border-sloid border-gray-700">
+            <h1 className="text-center text-3xl font-bold">World's Air Polluation : Real-time Air Quality Index</h1>
+            <div className="border-10 border-sloid left-0 top-0 mx-auto my-10 mb-20 h-[500px] w-[800px] rounded-[5rem] border-gray-700">
               <div className="overflow-hidden"></div>
               <iframe src="https://waqi.info/#/c/6.627/-2.109/2z" scrolling="no" className="-mt-15 h-full w-full overflow-hidden border-0"></iframe>
             </div>

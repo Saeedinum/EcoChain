@@ -1,22 +1,21 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import quiezIcon from "@/assets/global/quiz.svg"
 import data from "../../data/topics.json"
 
 import DifImageOne from "@/assets/topics/soil/definition/image1.png"
-
 import ReasonImageOne from "@/assets/topics/soil/reasons/image1.png"
 import ReasonImageTwo from "@/assets/topics/soil/reasons/image2.png"
 import ReasonImageThree from "@/assets/topics/soil/reasons/image3.png"
 import ReasonImageFour from "@/assets/topics/soil/reasons/image4.png"
-
 import EffImageOne from "@/assets/topics/soil/effects/image1.png"
 import EffImageTwo from "@/assets/topics/soil/effects/image2.png"
 import EffImageThree from "@/assets/topics/soil/effects/image3.png"
-
 import SolImageOne from "@/assets/topics/soil/solution/image1.png"
 import SolImageTwo from "@/assets/topics/soil/solution/image2.png"
 import SolImageThree from "@/assets/topics/soil/solution/image3.png"
+
+import useSmoothScroll from "@/hooks/useSmoothScroll"
 
 import "./index.css"
 
@@ -25,6 +24,10 @@ const Soil = () => {
 
   const sections = ["Definition", "Reasons", "Effects", "Solutions"] as const
   const [section, setSection] = useState<"Definition" | "Reasons" | "Effects" | "Solutions">("Definition")
+
+  const targetRef = useRef<HTMLElement>(null)
+  useSmoothScroll(400, targetRef)
+
   return (
     <section className="px-10 lg:px-20">
       <header className="flex flex-wrap items-end justify-between">
@@ -40,7 +43,7 @@ const Soil = () => {
           Go to Quiz
         </Link>
       </header>
-      <nav className="ml-auto mr-auto mt-10 flex w-full max-lg:justify-between lg:mt-5 lg:justify-center lg:gap-[60px]">
+      <nav ref={targetRef} className="ml-auto mr-auto mt-10 flex w-full max-lg:justify-between lg:mt-5 lg:justify-center lg:gap-[60px]">
         {sections.map(item => (
           <button
             key={item}
