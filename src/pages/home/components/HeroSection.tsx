@@ -1,10 +1,11 @@
+import { useEffect, useState } from "react"
+
 import leftBackground from "@/assets/home/leftbackground.png"
 import rightBackground from "@/assets/home/rightbackground.png"
 import animation1Image from "@/assets/home/animation1.png"
 import animation2Image from "@/assets/home/animation2.png"
 import animation3Image from "@/assets/home/animation3.png"
 import animation4Image from "@/assets/home/animation4.png"
-import { useEffect, useState } from "react"
 
 const HeroSection = () => {
   const images = [animation1Image, animation2Image, animation3Image, animation4Image]
@@ -25,11 +26,8 @@ const HeroSection = () => {
           <span> CLIMATE CHANGE</span>
           <span>DO ?!</span>
         </h2>
-        <button className="h-[54px] w-[174px] rounded-[20px] bg-[#528FCC] bg-gradient-to-r font-bold text-white hover:from-[#528FCC] hover:to-[#E4FF87] lg:w-[238px] lg:text-[20px]">Know more</button>
       </div>
-
       <img src={animation1Image} alt="" className="place-self-center max-lg:w-[325px] lg:hidden" />
-
       <div className="relative hidden h-[500px] w-[520px] lg:block">
         {images.map((image, index) => (
           <img
@@ -41,7 +39,6 @@ const HeroSection = () => {
           />
         ))}
       </div>
-
       <img src={leftBackground} alt="" className="absolute left-0 top-0 -z-10 max-lg:w-[452px]" />
       <img src={rightBackground} alt="" className="absolute right-0 -z-10 max-lg:top-[400px] max-lg:w-[384px] lg:top-0" />
     </section>
