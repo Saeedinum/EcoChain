@@ -1,25 +1,28 @@
 import { createBrowserRouter, Navigate, Outlet, RouterProvider } from "react-router-dom"
 
-import Home from "@/pages/home/Home"
+import { Toaster } from "@/components/ui/toaster"
+import { useAppSelector } from "@/store/hooks"
+
+import Senarios from "@/pages/senarios/Senarios"
 import NotFound from "@/pages/404/NotFound"
+import Home from "@/pages/home/Home"
+import Play from "@/pages/play/Play"
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Login from "@/feature/auth/pages/Login"
+
+import GreenhouseGases from "@/feature/learn/pages/topics/GreenhouseGases"
+import RenewableEnergy from "@/feature/learn/pages/topics/RenewableEnergy"
+import AirQuality from "@/feature/learn/pages/topics/AirQuality"
+import SeaLevels from "@/feature/learn/pages/topics/SeaLevels"
+import WildFires from "@/feature/learn/pages/topics/WildFires"
+import Water from "@/feature/learn/pages/topics/Water"
+import Soil from "@/feature/learn/pages/topics/Soil"
 import SignUp from "@/feature/auth/pages/SignUp"
 import Forget from "@/feature/auth/pages/Forget"
 import Learn from "@/feature/learn/pages/Learn"
+import Login from "@/feature/auth/pages/Login"
 import Quiz from "@/feature/learn/pages/Quiz"
-
-import { Toaster } from "@/components/ui/toaster"
-import { useAppSelector } from "@/store/hooks"
-import AirQuality from "@/feature/learn/pages/topics/AirQuality"
-import GreenhouseGases from "@/feature/learn/pages/topics/GreenhouseGases"
-import RenewableEnergy from "@/feature/learn/pages/topics/RenewableEnergy"
-import SeaLevels from "@/feature/learn/pages/topics/SeaLevels"
-import Soil from "@/feature/learn/pages/topics/Soil"
-import Water from "@/feature/learn/pages/topics/Water"
-import WildFires from "@/feature/learn/pages/topics/WildFires"
-import Senarios from "@/pages/senarios/Senarios"
 
 const Router = () => {
   const auth = useAppSelector(state => state.auth)
@@ -84,6 +87,10 @@ const Router = () => {
               element: <Senarios />
             },
             {
+              path: "/play",
+              element: <Play />
+            },
+            {
               path: "*",
               element: <NotFound />
             }
@@ -91,7 +98,7 @@ const Router = () => {
         },
         {
           path: "learn/:id/quiz",
-          element: <Quiz />
+          element: auth.token ? <Navigate to={"/"} /> : <Quiz />
         },
         {
           path: "login",
