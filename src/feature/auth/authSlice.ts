@@ -4,7 +4,7 @@ import type { PayloadAction } from "@reduxjs/toolkit"
 
 const initialState: Partial<AuthSlice> = {
   firstName: localStorage.getItem("name") || "",
-  token: localStorage.getItem("token") || "",
+  token: localStorage.getItem("token") || null,
   email: localStorage.getItem("email") || "",
   id: localStorage.getItem("id") || ""
 }
@@ -18,7 +18,7 @@ export const authSlice = createSlice({
       state.id = action.payload.id
       state.token = action.payload.token
       state.email = action.payload.email
-      localStorage.setItem("token", action.payload.token)
+      localStorage.setItem("token", action.payload.token ?? "")
       localStorage.setItem("name", action.payload.firstName)
       localStorage.setItem("id", action.payload.id)
       localStorage.setItem("email", action.payload.email)

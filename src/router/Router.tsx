@@ -27,6 +27,7 @@ import Scenarios from "@/pages/senarios/Scenarios"
 
 const Router = () => {
   const auth = useAppSelector(state => state.auth)
+  console.log(auth)
   return (
     <RouterProvider
       router={createBrowserRouter([
@@ -103,7 +104,7 @@ const Router = () => {
         },
         {
           path: "learn/:id/quiz",
-          element: auth.token ? <Navigate to={"/"} /> : <Quiz />
+          element: auth.token ? <Quiz /> : <Navigate to={"/login"} />
         },
         {
           path: "login",
