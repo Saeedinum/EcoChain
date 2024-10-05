@@ -7,30 +7,12 @@ import { login } from "../authSlice"
 
 import { otpRegex } from "@/schema"
 
-import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSlot,
-} from "@/components/ui/input-otp"
+import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp"
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useToast } from "@/hooks/use-toast"
 
-const Verify = ({
-  open,
-  handleVerifyDialog,
-  email,
-}: {
-  open: boolean
-  handleVerifyDialog: (e: boolean) => void
-  email: string
-}) => {
+const Verify = ({ open, handleVerifyDialog, email }: { open: boolean; handleVerifyDialog: (e: boolean) => void; email: string }) => {
   const navigate = useNavigate()
   const dispatch = useAppDispatch()
   const [verifyEmailUser, { isLoading }] = useVerifyEmailUserMutation()
@@ -44,22 +26,23 @@ const Verify = ({
     setError("")
     await verifyEmailUser({ code })
       .unwrap()
-      .then((payload) => {
+      .then(payload => {
         sessionStorage.clear()
         dispatch(
           login({
             token: payload.token,
             firstName: payload.data.firstName,
             id: payload.data._id,
-          }),
+            email: payload.data.email
+          })
         )
         navigate("/")
         toast({
           title: "Account verified",
-          description: "You have successfully verified your account",
+          description: "You have successfully verified your account"
         })
       })
-      .catch((error) => {
+      .catch(error => {
         setError(error.data.message)
       })
   }
@@ -68,18 +51,14 @@ const Verify = ({
     <Dialog open={open} onOpenChange={handleVerifyDialog}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className="text-center text-[20px]">
-            Check your email
-          </DialogTitle>
-          <DialogDescription className="text-center text-[15px]">
-            Enter the code that was sent to {email}
-          </DialogDescription>
+          <DialogTitle className="text-center text-[20px]">Check your email</DialogTitle>
+          <DialogDescription className="text-center text-[15px]">Enter the code that was sent to {email}</DialogDescription>
         </DialogHeader>
         <InputOTP
           className="bg-red-200"
           maxLength={6}
           pattern={otpRegex.source}
-          onChange={(value) => {
+          onChange={value => {
             setValue(value)
             setError("")
           }}
@@ -93,11 +72,7 @@ const Verify = ({
             <InputOTPSlot index={5} />
           </InputOTPGroup>
         </InputOTP>
-        <button
-          onClick={() => onSubmit(value)}
-          type="submit"
-          className="text-[20px] font-bold text-[#528FCC] duration-100 hover:text-blue-700"
-        >
+        <button onClick={() => onSubmit(value)} type="submit" className="text-[20px] font-bold text-[#528FCC] duration-100 hover:text-blue-700">
           {isLoading ? (
             <p
               className="text-surface ml-auto mr-auto h-7 w-7 animate-spin rounded-full border-4 border-solid border-blue-500 border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"

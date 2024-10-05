@@ -18,14 +18,17 @@ const DiscoverHomeSection = () => {
           <span> nature, and the natural behavior of our planet.</span>
         </p>
       </div>
-      <Link to={"/discover/deglaciation"} className="relative flex h-[80vh] w-full items-center justify-center bg-transparent sm:h-[100vh] lg:my-20 lg:h-[170vh]">
-        <div className="absolute left-[50%] top-20 z-50 flex size-[70px] translate-x-[-50%] cursor-pointer items-center justify-center rounded-full bg-[#FFFFE4] sm:size-[140px] lg:top-0 lg:size-[244px]">
+      <div className="relative flex h-[80vh] w-full items-center justify-center bg-transparent sm:h-[100vh] lg:my-20 lg:h-[170vh]">
+        <Link
+          to={"/discover/deglaciation"}
+          className="absolute left-[50%] top-20 z-50 flex size-[70px] translate-x-[-50%] cursor-pointer items-center justify-center rounded-full bg-[#FFFFE4] sm:size-[140px] lg:top-0 lg:size-[244px]"
+        >
           <img src={delgaciation} alt="Delgaciation" className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit" />
           <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">Delgaciation</span>
-        </div>
+        </Link>
 
         <Link
-          to={"/discover/torando"}
+          to={"/discover/tornado"}
           className="absolute left-[3rem] top-[12rem] flex size-[70px] cursor-pointer items-center justify-center rounded-full bg-[#FFFFE4] sm:size-[140px] lg:left-[10rem] lg:size-[244px]"
         >
           <img src={tornado} alt="Tornado" className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit" />
@@ -72,7 +75,7 @@ const DiscoverHomeSection = () => {
           <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">Tsunami</span>
         </Link>
         <img src={earthCo2} alt="Earth CO2" className="w-[114px] sm:mt-52 sm:w-[150px] lg:w-[300px]" />
-      </Link>
+      </div>
     </section>
   )
 }
