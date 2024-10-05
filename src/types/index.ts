@@ -1,6 +1,7 @@
 export interface AuthSlice {
   firstName: string
   token: string
+  email:string
   id: string
 }
 

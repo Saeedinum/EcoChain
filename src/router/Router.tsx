@@ -3,7 +3,6 @@ import { createBrowserRouter, Navigate, Outlet, RouterProvider } from "react-rou
 import { Toaster } from "@/components/ui/toaster"
 import { useAppSelector } from "@/store/hooks"
 
-import Senarios from "@/pages/senarios/Senarios"
 import NotFound from "@/pages/404/NotFound"
 import Home from "@/pages/home/Home"
 import Play from "@/pages/play/Play"
@@ -24,6 +23,7 @@ import Forget from "@/feature/auth/pages/Forget"
 import Learn from "@/feature/learn/pages/Learn"
 import Login from "@/feature/auth/pages/Login"
 import Quiz from "@/feature/learn/pages/Quiz"
+import Scenarios from "@/pages/senarios/Scenarios"
 
 const Router = () => {
   const auth = useAppSelector(state => state.auth)
@@ -84,8 +84,8 @@ const Router = () => {
               ]
             },
             {
-              path: "/senarios",
-              element: <Senarios />
+              path: "/scenarios",
+              element: <Scenarios />
             },
             {
               path: "/play",

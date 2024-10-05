@@ -28,33 +28,32 @@ const Login = () => {
     register,
     handleSubmit,
     setError,
-    formState: { errors },
-  } = useForm<LoginForm>(
-    {
-      resolver:zodResolver(loginSchema)
-    }
-  )
+    formState: { errors }
+  } = useForm<LoginForm>({
+    resolver: zodResolver(loginSchema)
+  })
 
   const onSubmit: SubmitHandler<LoginForm> = async (data: LoginForm) => {
     await loginMutation(data)
       .unwrap()
-      .then((payload) => {
+      .then(payload => {
         dispatch(
           login({
             token: payload.token,
             firstName: payload.data.firstName,
             id: payload.data._id,
-          }),
+            email: payload.data.Email
+          })
         )
         navigate("/")
         toast({
-          description: "You have successfully logged in",
+          description: "You have successfully logged in"
         })
       })
-      .catch((error) => {
+      .catch(error => {
         setError("email", {
           type: "manual",
-          message: error.data.message,
+          message: error.data.message
         })
         setError("password", {})
       })
@@ -72,17 +71,8 @@ const Login = () => {
             </h1>
           </header>
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="mt-5 flex flex-col items-center justify-between gap-7 max-sm:px-10"
-          >
-            <InputField
-              label="  Email"
-              id="email"
-              placeholder="enter your email"
-              className={`${errors.email ? "border-red-500" : ""}`}
-              register={register("email", { required: true })}
-            />
+          <form onSubmit={handleSubmit(onSubmit)} className="mt-5 flex flex-col items-center justify-between gap-7 max-sm:px-10">
+            <InputField label="  Email" id="email" placeholder="enter your email" className={`${errors.email ? "border-red-500" : ""}`} register={register("email", { required: true })} />
             <InputField
               label=" Password"
               id="password"
@@ -91,16 +81,10 @@ const Login = () => {
               className={`${errors.password ? "border-red-500" : ""}`}
               register={register("password", { required: true })}
             />
-            <Link
-              to={"/forgetPassword"}
-              className="-my-5 place-self-end font-medium text-[#86A41E]"
-            >
+            <Link to={"/forgetPassword"} className="-my-5 place-self-end font-medium text-[#86A41E]">
               forget Password ?
             </Link>
-            <button
-              type="submit"
-              className="h-[54px] w-full rounded-[20px] bg-[#528FCC] text-[20px] font-bold text-white max-sm:mb-5 sm:w-[418px]"
-            >
+            <button type="submit" className="h-[54px] w-full rounded-[20px] bg-[#528FCC] text-[20px] font-bold text-white max-sm:mb-5 sm:w-[418px]">
               {isLoading ? (
                 <p
                   className="text-surface ml-auto mr-auto h-7 w-7 animate-spin rounded-full border-4 border-solid border-white border-e-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
@@ -111,9 +95,7 @@ const Login = () => {
               )}
             </button>
           </form>
-          {errors.email && (
-            <p className="text-center text-red-500">{errors.email.message}</p>
-          )}
+          {errors.email && <p className="text-center text-red-500">{errors.email.message}</p>}
         </section>
         <img src={image} alt="" className="hidden lg:block" />
       </main>

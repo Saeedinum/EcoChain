@@ -11,7 +11,7 @@ import image3after from "@/assets/senarios/image3after.png"
 
 import { Progress } from "@/components/ui/progress"
 
-const Senarios = () => {
+const Scenarios = () => {
   const [effect, setEffect] = useState(false)
   const [score, setScore] = useState(0)
   const [isDesktop, setIsDesktop] = useState(true)
@@ -115,4 +115,4 @@ const Senarios = () => {
   )
 }
 
-export default Senarios
+export default Scenarios
