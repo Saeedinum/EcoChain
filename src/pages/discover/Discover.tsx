@@ -12,13 +12,13 @@ const Discover = () => {
       <main className="w-full">
         <header className="">
           <figure className="flex flex-row items-center justify-evenly">
-            <img src={earchImage} alt="" className="w-[114px] sm:w-[150px] lg:w-[250px]" />
             <figcaption className="flex max-w-[500px] flex-col items-center gap-5">
               <h1 className="text-center text-2xl font-extrabold text-[#0B539B] sm:text-3xl md:text-4xl">Discover</h1>
               <p className="hidden text-center text-[15px] font-bold text-[#BABABA] lg:block">
                 Climate change is causing many changes in the environment,nature, and the natural behavior of our planet.
               </p>
             </figcaption>
+            <img src={earchImage} alt="" className="hidden w-[114px] sm:w-[150px] md:block lg:w-[250px]" />
           </figure>
         </header>
         <p className="mx-10 my-10 h-[1px] bg-blue-300"></p>
