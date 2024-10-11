@@ -12,8 +12,7 @@ const Home = () => {
     <main className="select-none overflow-hidden">
       <HeroSection />
       <DiscoverHomeSection />
-      <section className="relative flex flex-col items-center gap-10 sm:mt-52 md:mt-60 md:flex-row md:justify-center md:gap-40">
-        <p className="absolute -right-1 -top-52 -z-10 h-[269px] w-[32px] rotate-[-27deg] rounded-[333px] bg-[#FFFFE4] lg:-right-32 lg:h-[1313px] lg:w-[89px]"></p>
+      <section className="relative flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-40 lg:mt-20">
         <img src={learn} alt="" className="w-[191px] md:w-[250px] lg:w-fit" />
         <div className="flex flex-col items-center gap-8">
           <h2 className="flex flex-col items-center gap-2 text-nowrap text-center text-[24px] font-extrabold text-[#0B539B] lg:text-[45px]">Learn with quiz</h2>

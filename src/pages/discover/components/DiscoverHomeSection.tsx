@@ -23,18 +23,18 @@ const DiscoverHomeSection = () => {
     <section className="flex flex-col gap-10 bg-transparent">
       <div>
         <h2 className="text-nowrap text-center text-[24px] font-extrabold text-[#0B539B] lg:text-[48px]">Discover</h2>
-        <p className="flex flex-col items-center text-[13px] font-bold text-[#BABABA] lg:text-[15px]">
-          <span> Climate change is causing many changes in the environment,</span>
-          <span> nature, and the natural behavior of our planet.</span>
+        <p className="text-center text-[13px] font-bold text-[#BABABA] lg:text-[15px]">
+          Climate change is causing many changes in the environment, <br />
+          nature, and the natural behavior of our planet.
         </p>
       </div>
 
       <div className="flex min-h-[350px] overflow-hidden">
         {[1, 2].map(e => (
-          <div key={e} className="animate-loop-scroll mt-10 flex gap-20 pl-20 *:size-[70px] *:text-nowrap *:hover:*:text-blue-700 *:sm:size-[140px] lg:gap-40 lg:pl-40 *:lg:size-[244px]">
+          <div key={e} className="mt-10 flex animate-loop-scroll gap-20 pl-20 *:size-[100px] *:text-nowrap *:hover:*:text-blue-700 *:sm:size-[140px] lg:gap-40 lg:pl-40 *:lg:size-[244px]">
             {items.map((item, index) => (
               <Link key={index} to={item.link} className="relative flex cursor-pointer items-center justify-center rounded-full bg-[#FFFFE4]">
-                <img src={item.imgSrc} alt={item.alt} className="absolute z-50 w-[45px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit" />
+                <img src={item.imgSrc} alt={item.alt} className="absolute z-50 w-[80px] transition-transform duration-300 hover:scale-110 sm:w-[100px] lg:w-fit" />
                 <span className="absolute -bottom-10 text-sm font-bold lg:text-[20px]">{item.label}</span>
               </Link>
             ))}

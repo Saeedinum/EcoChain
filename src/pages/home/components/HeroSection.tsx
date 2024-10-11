@@ -8,13 +8,13 @@ import Earth from "@/components/Earth"
 
 const HeroSection = () => {
   return (
-    <section className="overflow- relative flex flex-col items-center gap-10 pb-20 lg:h-screen lg:flex-row lg:justify-between lg:px-[5rem] lg:pb-[15rem]">
+    <section className="overflow- relative flex h-[80vh] flex-col items-center gap-5 pb-20 lg:h-screen lg:flex-row lg:justify-between lg:px-[5rem] lg:pb-[15rem]">
       <div className="flex flex-col items-center gap-10">
-        <h2 className="flex flex-col items-center gap-2 text-nowrap text-center text-[20px] font-extrabold text-[#0B539B] lg:text-[45px]">
+        <h1 className="flex flex-col items-center gap-2 text-nowrap text-center text-[25px] font-extrabold text-[#0B539B] lg:text-[45px]">
           <span>WHAT</span>
           <span> CLIMATE CHANGE</span>
           <span>DO ?!</span>
-        </h2>
+        </h1>
       </div>
 
       <Canvas className="h-[600px] w-[700px]">

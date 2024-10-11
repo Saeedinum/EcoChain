@@ -14,9 +14,9 @@ export default function Model(props: GroupProps) {
       if (window.innerWidth < 640) {
         newScale = 2
       } else if (window.innerWidth < 768) {
-        newScale = 2.4
+        newScale = 3
       } else if (window.innerWidth < 1024) {
-        newScale = 2.7
+        newScale =3
       } else {
         newScale = 3
       }
