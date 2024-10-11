@@ -4,7 +4,7 @@ import { Mesh } from "three"
 import { GroupProps } from "@react-three/fiber"
 
 export default function Model(props: GroupProps) {
-  const { nodes, materials } = useGLTF("/public/earth.gltf")
+  const { nodes, materials } = useGLTF("/earth.gltf")
 
   const [scale, setScale] = useState(3)
 
@@ -35,4 +35,4 @@ export default function Model(props: GroupProps) {
   )
 }
 
-useGLTF.preload("/public/earth.gltf")
+useGLTF.preload("/earth.gltf")
