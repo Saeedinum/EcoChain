@@ -8,7 +8,7 @@ import Earth from "@/components/Earth"
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col items-center gap-10 overflow-hidden pb-20 lg:h-screen lg:flex-row lg:justify-between lg:px-[5rem] lg:pb-[15rem]">
+    <section className="overflow- relative flex flex-col items-center gap-10 pb-20 lg:h-screen lg:flex-row lg:justify-between lg:px-[5rem] lg:pb-[15rem]">
       <div className="flex flex-col items-center gap-10">
         <h2 className="flex flex-col items-center gap-2 text-nowrap text-center text-[20px] font-extrabold text-[#0B539B] lg:text-[45px]">
           <span>WHAT</span>
@@ -26,7 +26,7 @@ const HeroSection = () => {
         <Environment preset="sunset" />
       </Canvas>
       <img src={leftBackground} alt="" className="absolute left-0 top-0 -z-10 max-lg:w-[452px]" />
-      <img src={rightBackground} alt="" className="absolute right-0 -z-10 max-lg:top-[400px] max-lg:w-[384px] lg:top-0" />
+      <img src={rightBackground} alt="" className="absolute right-0 top-0 -z-10 hidden max-lg:w-[384px] lg:block" />
     </section>
   )
 }
